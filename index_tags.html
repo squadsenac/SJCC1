@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JC-busca</title>
+    
+    <link rel="stylesheet" href="./css/sjcc.css">
+    <link href="bootstrap\css\bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css">
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+</style>
+
+<body>
+ 
+    <div class="logo-jc">
+        <img src="./src/logo-jc.png" width="259" height="188">
+    </div>
+
+    <h2 class="titulo">Vídeos para rodapé de matérias</h2>
+
+    <form action= "#"> <!--Organizar-->
+
+    <hr class="linha">
+
+    <div class="container">
+        <div class="row">
+                <div class="col-4">
+
+                        <div class="forms-tags-all"> 
+                                
+                                <p class="t-busca-tags">Seleção de Tags</p>
+                                <br>
+
+                                <div id="tags2" class="tags2">
+                                    <!-- <button class="nome" type="button" id="tag1">tag1<img class="delete" src="src/icons8-delete-64.png"></button>
+                                    <button class="nome" type="button" id="tag2">tag2<img class="delete" src="src/icons8-delete-64.png"></button>
+                                    <button class="nome" type="button" id="tag3">tag3<img class="delete" src="src/icons8-delete-64.png"></button>
+                                    <button class="nome" type="button" id="tag4">tag4<img class="delete" src="src/icons8-delete-64.png"></button> -->
+                                </div>
+
+                                <div id="aviso" class="aviso">
+                                </div>
+
+                                <div class="texto-busca">
+                                    <form>
+                                        <label for= "text"></label> 
+                                        <input class="busca-tags" type="text" id="busca" name="busca" placeholder="Adicione uma tag aqui" rows="20" cols= "50"></input>
+                                        <button id="plus" type="button" onclick="criarTag()"><img class="plus" src="./src/icons8-plus-64.png"></button>
+                                    </form>
+                                </div>
+                        </div>
+
+                </div>
+                <div class="col-4">
+                    <div class="periodo">
+
+                        <p class="t-periodo">Período</p>
+                        <br>
+                
+                        <form class="cal-datas2" action="">
+                            <label class= "de" for= "date">De:</label>
+                            <input class="date2" type= "date" id= "date" name= "date" 
+                            value= "0000-00-00"><br><br>
+                
+                            <label class= "ate" for= "date">Até:</label>
+                            <input class="date2" type= "date" id= "date" name= "date" 
+                            value= "0000-00-00"><br><br>
+                        </form>
+                    
+                    </div>
+                </div>
+                <div class="col-4">
+                
+                    <div>
+
+                        <p class="organizacao">Tipo de Organização</p>
+
+                            <form class="tipo2">
+
+                                <p><input class="rad-tipo" type="radio" id="Lista" name="tipo" value="Lista"/>
+                                <label class="lista" for="Lista">Lista</label></p>
+                
+                                <p><input class="rad-tipo" type="radio" id="Mosaico" name="tipo" value="Mosaico"/>
+                                <label class="mosaico" for="Mosaico">Mosaico</label></p>
+
+                            </form>          
+                            
+                    </div>
+
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <form class="form-btn-codigo2" action="">
+                    <button class="btn-codigo2" type="button" id="codigo">GERAR CÓDIGO</button>
+            </form>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <hr class="linha">
+    
+    <!--CAIXA DOS LINKS-->
+    <div class="link">
+        <p class="titulo-codigo">Código</p> 
+            <form class="form-txtarea" action="">
+                <label for= "textarea-tags"></label> 
+                <textarea name= "textarea-tags" id= "textarea" rows="20" cols= "70">
+
+                    <br>
+                    <iframe width="942" height="530" src="https://www.youtube.com/embed/8iMOl4O2CGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p class="descri-video">Vídeo 1</p>
+                    <br>
+                    <br> 
+                    <iframe width="942" height="530" src="https://www.youtube.com/embed/H4KTlxmxuu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p class="descri-video">Vídeo 2</p>
+                    <br>
+
+                </textarea>
+            </form>
+
+            <form class="form-btn-codigo" action="">
+                <a id="link-prev" href=""><button class="btn-codigo" type="button" id="Preview">PREVIEW</button></a>
+                <!-- <a href="./index-materia.html"><button class="btn-codigo" type="button" id="Preview">EXEMPLO DE PÁGINA</button></a> -->
+                </form>
+            
+                <!-- <p class="titulo-codigo">Exemplo de Página</p>
+                
+                <iframe width="1920" height="1000" src="./index-materia.html" frameborder="3">teste</iframe> -->
+               
+    </div>
+
+   
+</div> 
+
+<script src="./js/behaviors_sjcc.js"></script>
+
+</body>
+
+</html>
