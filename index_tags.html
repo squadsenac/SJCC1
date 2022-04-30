@@ -29,23 +29,21 @@
 
     <div class="container">
         <div class="row">
-                <div class="col-4">
 
+                <!--Seleção de Tags-->
+                <div class="col-4">
                         <div class="forms-tags-all"> 
                                 
                                 <p class="t-busca-tags">Seleção de Tags</p>
                                 <br>
 
                                 <div id="tags2" class="tags2">
-                                    <!-- <button class="nome" type="button" id="tag1">tag1<img class="delete" src="src/icons8-delete-64.png"></button>
-                                    <button class="nome" type="button" id="tag2">tag2<img class="delete" src="src/icons8-delete-64.png"></button>
-                                    <button class="nome" type="button" id="tag3">tag3<img class="delete" src="src/icons8-delete-64.png"></button>
-                                    <button class="nome" type="button" id="tag4">tag4<img class="delete" src="src/icons8-delete-64.png"></button> -->
                                 </div>
 
                                 <div id="aviso" class="aviso">
                                 </div>
-
+                                
+                                <!--Adicionar tag-->
                                 <div class="texto-busca">
                                     <form>
                                         <label for= "text"></label> 
@@ -54,79 +52,110 @@
                                     </form>
                                 </div>
                         </div>
-
+                        <!--Check para usar tags -- URL e .HTML--> 
+                        <div class="check-tag">
+                            <form>
+                                <input class= "check" type = "checkbox" id="checkbox" name="checkbox">
+                                <label class= "check1" for= "checkbox">Usar tags em URL ou arquivo .html</label>
+                            </form>
+                        </div>
+                        <!--URL da notícia-->  
+                        <div class="texto-url">
+                            <form>
+                                <label for="text">URL:</label>
+                                <input class="busca-url" type= "text" id="url" name="url" placeholder="Digite URL da notícia para fazer a busca">
+                            </form>
+                        </div>
+                        <!--Arquivo-->
+                        <div class="texto-arquivo"> <!--FALTA INSERIR O ICON-->
+                            <form>
+                                <label  for= "text">Arquivo:</label>
+                                <input class="busca-arquivo" type="text" id="arquivo" name="arquivo" placeholder="Selecione o arquivo que deseja usar">
+                          </form>
+                        </div>
                 </div>
+        
+                <!--Período-->
                 <div class="col-4">
-                    <div class="periodo">
+                        <div class="periodo">
 
-                        <p class="t-periodo">Período</p>
-                        <br>
-                
-                        <form class="cal-datas2" action="">
-                            <label class= "de" for= "date">De:</label>
-                            <input class="date2" type= "date" id= "date" name= "date" 
-                            value= "0000-00-00"><br><br>
-                
-                            <label class= "ate" for= "date">Até:</label>
-                            <input class="date2" type= "date" id= "date" name= "date" 
-                            value= "0000-00-00"><br><br>
-                        </form>
-                    
-                    </div>
-                </div>
-                <div class="col-4">
-                
-                    <div>
-
-                        <p class="organizacao">Tipo de Organização</p>
-
-                            <form class="tipo2">
-
-                                <p><input class="rad-tipo" type="radio" id="Lista" name="tipo" value="Lista"/>
-                                <label class="lista" for="Lista">Lista</label></p>
-                
-                                <p><input class="rad-tipo" type="radio" id="Mosaico" name="tipo" value="Mosaico"/>
-                                <label class="mosaico" for="Mosaico">Mosaico</label></p>
-
-                            </form>          
+                                <p class="t-periodo">Período de postagem  do vídeo:</p>
+                                <br>
+                                <!--Calendario-->
+                                <div class="cal-datas2" >
+                                    <form action="">
+                                        <label class= "de" for= "date">De:</label>
+                                        <input class="date2" type= "date" id= "date" name= "date" 
+                                        value= "0000-00-00"><br><br>
                             
-                    </div>
+                                        <label class= "ate" for= "date">Até:</label>
+                                        <input class="date2" type= "date" id= "date" name= "date" 
+                                        value= "0000-00-00"><br><br>
+                                    </form>
+                                </div>
+                                <br>
 
+                                 <!--Número de vídeos--> 
+                                 <div class="num_videos">
+                                    <form action="">
+                                        <label for="numero">Número de vídeos:</label>
+                                        <input type="number" id="numero" name="numero" min="1" max="10"></input>
+                                    </form>
+                                </div>
+                        </div>
+                </div>                           
+           
+                <!--Tipo de Organização-->
+                <div class="col-4">
+                        <div  class="organizacao"> 
+                        
+                                <p class="t-organizacao">Tipo de Organização</p> 
+
+                                <form class="tipo2">
+                                    <p><input class="rad-tipo" type="radio" id="Lista" name="tipo" value="lista"/>
+                                    <label class="lista" for="lista">Lista</label></p>
+                    
+                                    <p><input class="rad-tipo" type="radio" id="mosaico" name="tipo" value="mosaico"/>
+                                    <label class="mosaico" for="mosaico">Mosaico</label></p>
+
+                                    <p><input class="rad-tipo" type="radio" id="thumbnails" name="tipo" value="tipo-thumbnails"/>
+                                    <label class="thumbnails" for="thumbnails">Thumbnails</label></p>                                
+                                </form>          
+                        </div>
                 </div>
         </div>
-
-        <div class="row">
-            <div class="col-12">
-                <form class="form-btn-codigo2" action="">
-                    <button class="btn-codigo2" type="button" id="codigo">GERAR CÓDIGO</button>
-            </form>
-            </div>
-        </div>
-
-    </div>
-
+    </div><!--Fecha o container1--> 
     <br>
     <br>
-    <hr class="linha">
-    
-    <!--CAIXA DOS LINKS-->
-    <div class="link">
-        <p class="titulo-codigo">Código</p> 
-            <form class="form-txtarea" action="">
-                <label for= "textarea-tags"></label> 
-                <textarea name= "textarea-tags" id= "textarea" rows="20" cols= "70">
+            <!--Botão de Gerar Código-->
+            <hr class="linha"> 
+                        <div class="form-btn-codigo2">
+                            <form action="">
+                                <button class="btn-codigo2" type="button" id="codigo">GERAR CÓDIGO</button>
+                            </form>
+                        </div>
+            <hr class="linha">
 
-                    <br>
-                    <iframe width="942" height="530" src="https://www.youtube.com/embed/8iMOl4O2CGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <p class="descri-video">Vídeo 1</p>
-                    <br>
-                    <br> 
-                    <iframe width="942" height="530" src="https://www.youtube.com/embed/H4KTlxmxuu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <p class="descri-video">Vídeo 2</p>
-                    <br>
+    <!--CAIXA DOS LINKS--> 
+                        <div class="link">
 
-                </textarea>
-            </form>
+                                <p class="titulo-codigo">Código</p> 
+
+                                <form class="form-txtarea" action="">
+                                    <label for= "textarea-tags"></label> 
+                                    <textarea name= "textarea-tags" id= "textarea" rows="20" cols= "70">
+
+                                        <br>
+                                        <iframe width="942" height="530" src="https://www.youtube.com/embed/8iMOl4O2CGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="descri-video">Vídeo 1</p>
+                                        <br>
+                                        <br> 
+                                        <iframe width="942" height="530" src="https://www.youtube.com/embed/H4KTlxmxuu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <p class="descri-video">Vídeo 2</p>
+                                        <br>
+
+                                    </textarea>
+                                </form>
 
             <form class="form-btn-codigo" action="">
                 <a id="link-prev" href=""><button class="btn-codigo" type="button" id="Preview">PREVIEW</button></a>
