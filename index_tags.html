@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/sjcc.css">
     <link href="bootstrap\css\bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="bootstrap/font/bootstrap-icons.css">
 </head>
 
 <style>
@@ -23,7 +24,7 @@
 
     <h2 class="titulo">Vídeos para rodapé de matérias</h2>
 
-    <form action= "#"> <!--Organizar-->
+    <form action= "">
 
     <hr class="linha">
 
@@ -67,7 +68,7 @@
                             </form>
                         </div>
                         <!--Arquivo-->
-                        <div class="texto-arquivo"> <!--FALTA INSERIR O ICON-->
+                        <div class="texto-arquivo">
                             <form>
                                 <label  for= "text">Arquivo:</label>
                                 <input class="busca-arquivo" type="text" id="arquivo" name="arquivo" placeholder="Selecione o arquivo que deseja usar">
@@ -112,7 +113,7 @@
                                 <p class="t-organizacao">Tipo de Organização</p> 
 
                                 <form class="tipo2">
-                                    <p><input class="rad-tipo" type="radio" id="Lista" name="tipo" value="lista"/>
+                                    <p><input class="rad-tipo" type="radio" id="lista" name="tipo" value="lista"/>
                                     <label class="lista" for="lista">Lista</label></p>
                     
                                     <p><input class="rad-tipo" type="radio" id="mosaico" name="tipo" value="mosaico"/>
@@ -124,7 +125,7 @@
                         </div>
                 </div>
         </div>
-    </div><!--Fecha o container1--> 
+    </div>
     <br>
     <br>
             <!--Botão de Gerar Código-->
@@ -137,41 +138,76 @@
             <hr class="linha">
 
     <!--CAIXA DOS LINKS--> 
+    <div class="container">
+        <div class="row">
+
+                <div class="col-6">
                         <div class="link">
 
-                                <p class="titulo-codigo">Código</p> 
+                                <p class="t-codigo">Código</p> 
 
-                                <form class="form-txtarea" action="">
-                                    <label for= "textarea-tags"></label> 
-                                    <textarea name= "textarea-tags" id= "textarea" rows="20" cols= "70">
+                                <div class="form-txtarea">
+                                    <form action="">                    
+                                        <label for= "textarea-tags"></label> 
+                                        <textarea name= "textarea-tags" id= "textarea" rows="20" cols= "70">
 
-                                        <br>
-                                        <iframe width="942" height="530" src="https://www.youtube.com/embed/8iMOl4O2CGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <p class="descri-video">Vídeo 1</p>
-                                        <br>
-                                        <br> 
-                                        <iframe width="942" height="530" src="https://www.youtube.com/embed/H4KTlxmxuu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <p class="descri-video">Vídeo 2</p>
-                                        <br>
+                                            <br>
+                                            <iframe width="942" height="530" src="https://www.youtube.com/embed/8iMOl4O2CGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p class="descri-video">Vídeo 1</p>
+                                            <br>
+                                            <br> 
+                                            <iframe width="942" height="530" src="https://www.youtube.com/embed/H4KTlxmxuu8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p class="descri-video">Vídeo 2</p>
+                                            <br>
 
-                                    </textarea>
-                                </form>
+                                        </textarea>
+                                    </form>
 
-            <form class="form-btn-codigo" action="">
-                <a id="link-prev" href=""><button class="btn-codigo" type="button" id="Preview">PREVIEW</button></a>
-                <!-- <a href="./index-materia.html"><button class="btn-codigo" type="button" id="Preview">EXEMPLO DE PÁGINA</button></a> -->
-                </form>
-            
-                <!-- <p class="titulo-codigo">Exemplo de Página</p>
-                
-                <iframe width="1920" height="1000" src="./index-materia.html" frameborder="3">teste</iframe> -->
+                                    <div class="form-btn-codigo">
+                                            <form action="">
+                                                <a id="link-prev" href=""><button class="btn-codigo" type="button" id="Preview">PREVIEW</button></a>
+                                            </form>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                    
+                <div class="col-6">
+                    <div  class="implementacao"> 
+
+                            <p class="t-implementacao">Implementação</p>
+                                <p class="t-arquivo">Arquivo</p>
+                                <div>
+                                    <form>
+                                        <label  for= "text"></label>
+                                        <input class="criar-arquivo1" type="text" id="criar-arquivo" name="criar-arquivo" placeholder="Selecione o arquivo que deseja implementar">
+                                    </form>
+                                </div>
+                                <br>
+
+                                <div class="status-implementacao"> 
+                                    <form action="form-status">
+                                        <label  for= "textarea-status"></label>
+                                        <textarea name="status-implementacao" id="textarea-status" rows="5" cols= "45">
+                                            </textarea>
+                                    </form>
+                                    <div class="form-btn-aplicar">
+                                        <form action="">
+                                            <a id="link-aplicar" href=""><button class="btn-aplicar" type="button" id="Preview">Aplicar</button></a>
+                                        </form>
+                                    </div>
+                                </div>
+                    </div> 
+            </div> 
+    </div> 
+</div>
+<br>
+<br>
+</form>                 
                
-    </div>
-
-   
-</div> 
-
 <script src="./js/behaviors_sjcc.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 
 </body>
 
