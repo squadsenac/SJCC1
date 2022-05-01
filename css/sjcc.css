@@ -80,11 +80,7 @@ p.contato{
 
 /* PAGINA DE TAGS */
 
-#plus{
-    border-width: 0px;
-    background-color: #ffffff;
-}
-
+/*Geral*/
 .titulo{
     text-align: center;
     padding-left: 50px;
@@ -97,33 +93,12 @@ p.contato{
     border-top: 1px dashed #000000;
 }
 
-.tags{
+/*Seleção de Tags*/
+#tags2{
     font-size: 15px;
     padding-left: 45px;
     padding-top: 20px;
     text-align: center;
-}
-
-.nome{
-    width: auto;
-    height: auto;
-    padding: auto;
-    background-color: #C4C4C4;
-    border-radius: 13px; 
-    border: none;
-    font-weight:600;
-    font-size: 18px;
-}
-
-.nome:hover{
-    background-color: #E2001A;
-    color: white;
-    box-shadow: 0 12px 10px 0 rgba(90, 90, 90, 0.19);
-}
-
-.nome .delete{
-    height: 12px;
-    padding-left: 15px;
 }
 
 .t-busca-tags{
@@ -135,6 +110,65 @@ p.contato{
     padding-left: 0px;
 }
 
+/*Adicionar Tag*/
+.texto-busca{
+    padding-top: 30px;
+}
+
+.busca-tags{
+    width: 82%;
+    size:40;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px, 250px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+#plus{
+    border-width: 0px;
+    background-color: #ffffff;
+}
+
+.plus{
+    position:static;
+    top: 353px;
+    height: 20px;
+    padding-left: 0px;
+    border-width: 0px;
+    background-color: #ffffff;
+}
+
+/*Check p/ usar tags*/
+.check-tag {
+    padding: 25px 0;
+}
+
+.check-tag .check{
+    width: 27px;
+    height: 20px;
+}
+
+/*URL da notícia*/
+.texto-url {
+    padding: 0 0 15px 0;
+}
+
+.busca-url{
+    width: 75%;
+    font-size: 15px;
+    height: 30px;
+}
+
+/*Arquivo*/
+.busca-arquivo{
+    width: 69%;
+    font-size: 15px;
+    height: 30px;
+    
+}
+
+/*Período*/
 .periodo{
     font-weight: bold;
     padding-top: 20px;
@@ -145,73 +179,43 @@ p.contato{
 }
 
 .periodo .cal-datas .de{
-    /* padding-left: 120px; */
     text-align: right;
     font-size:18px;
 }
 
 .periodo .cal-datas .ate{
-    /* padding-left: 195px; */
     text-align: right;
     font-size:18px;
 }
 
-.date{
-    width: 12%;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
 
-.organizacao{
+/*Tipo de Organização*/
+.t-organizacao{
     font-weight: bold;
     font-size:20px;
     padding-bottom: 16px;
     padding-top: 20px;
     padding-left: 0px;
-    /* padding-right: 240px; */
     text-align: center;
-}
-
-#lista{
-    height:48;
-    width: 100;
 }
 
 form.tipo2{
     padding-left: 20px;
     padding-top: 10px;
-}
-
-.tipo2 .lista{
     font-weight:500;
-    /* padding-top:80px; */
-    padding-right: 80px;
-    font-size:18px;
-
-} 
-
-.tipo2 .mosaico{
-    font-weight:500;
-    /* padding-top:200px; */
     padding-right: 80px;
     font-size:18px;
 }
 
-.link .url #textarea{
-    width: 500px;
-    height:300px;
-    font-size:18px;
+#lista{                     
+    height:48;
+    width: 100;
 }
 
-.link p{
-    font-weight: bold;
-    font-size: 20px;
-
-}
-
-.btn-codigo{
-    width: 114px;
-    height: 45px;
+/*Botão 1*/
+.btn-codigo2{
+    width: 125px;
+    height: 50px;
     background-color: #E2001A;
     border-radius: 13px; 
     border: none;
@@ -223,15 +227,68 @@ form.tipo2{
     font-size: 14px;
 }
 
-
-.form-btn-codigo{
+.form-btn-codigo2{
     text-align: center;
-    padding-top: 20px;
     cursor: pointer;
+    padding: 8px; 
 }
 
-.titulo-codigo{
+.btn-codigo2:hover{
+    background-color: #E2001A;
+    color: white;
+    box-shadow: 0 12px 10px 0 rgba(90, 90, 90, 0.19);
+}
+
+.btn-codigo2:active {
+    background-color: #a80417;
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+  }
+
+/*Caixa dos Links*/
+div .link{       
+    float:left;
+    padding-left: 50px;
+}
+
+.link .url #textarea{
+    width: 500px;
+    height:300px;
+    font-size:18px;
+}
+
+.link p{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.t-codigo{
     text-align: center;
+}
+
+.form-txtarea{
+    text-align: center;
+}
+
+
+/*Botão 2*/
+.form-btn-codigo{
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+}
+.btn-codigo{
+    width: 125px;
+    height: 50px;
+    background-color: #E2001A;
+    border-radius: 13px; 
+    border: none;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    text-size-adjust: auto;
+    font-size: 14px;
 }
 
 .codigo:hover{
@@ -246,36 +303,33 @@ form.tipo2{
     transform: translateY(1px);
   }
 
-  .busca-tags{
-    width: 82%;
+
+/*Implementação*/
+  div.implementacao{
+    float:right;
+    padding-right: 50px;
+    position: static;
+}
+
+.implementacao p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.criar-arquivo1{
+    width: 100%;
     size:40;
     font-size: 16px;
     text-align: center;
-    padding: 20px, 250px;
     padding-top: 5px;
     padding-bottom: 5px;
-    /* transform: translate(0, 20px); */
   }
 
-  .texto-busca{
-    padding-top: 30px;
-}
-
-.form-txtarea{
-    text-align: center;
-}
-
- .plus{
-    position:static;
-    top: 353px;
-    height: 20px;
-    padding-left: 0px;
-    /* transform: translate(0, 20px); */
-}
-
-.btn-codigo2{
-    width: 114px;
-    height: 45px;
+/*Botão 3*/
+.btn-aplicar{
+    width: 125px;
+    height: 50px;
     background-color: #E2001A;
     border-radius: 13px; 
     border: none;
@@ -287,11 +341,23 @@ form.tipo2{
     font-size: 14px;
 }
 
-.form-btn-codigo2{
+.form-btn-aplicar{
     text-align: center;
-    padding-top: 20px;
     cursor: pointer;
+    padding: 20px; 
 }
+
+.btn-aplicar:hover{
+    background-color: #E2001A;
+    color: white;
+    box-shadow: 0 12px 10px 0 rgba(90, 90, 90, 0.19);
+}
+
+.btn-aplicar:active {
+    background-color: #a80417;
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+  }
 
 
 /* PÁGINA DE EXEMPLO - REPORTAGEM */
