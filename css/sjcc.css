@@ -162,11 +162,16 @@ p.contato{
 
 /*Arquivo*/
 .busca-arquivo{
-    width: 69%;
+    width: 70%;
     font-size: 15px;
     height: 30px;
     
 }
+
+.texto-arquivo i { 
+    position: absolute;
+    left: 442px;
+  }
 
 /*Período*/
 .periodo{
@@ -270,6 +275,13 @@ div .link{
     text-align: center;
 }
 
+.form-txtarea i{
+    position: absolute;
+    bottom: -215px;
+    right: 730px;
+    font-size: 27px;
+}
+
 
 /*Botão 2*/
 .form-btn-codigo{
@@ -318,12 +330,22 @@ div .link{
 }
 
 .criar-arquivo1{
-    width: 100%;
+    width: 99%;
     size:40;
     font-size: 16px;
-    text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+
+  .t-arquivo2{
+    padding-left: 5px;
+  }
+
+.t-arquivo2 i { 
+    position: absolute;
+    right:180px;
+    bottom: -250px;
+    font-size: 21px;
   }
 
 /*Botão 3*/
