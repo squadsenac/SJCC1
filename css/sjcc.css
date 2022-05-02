@@ -444,8 +444,8 @@ form.tipo2{
 
   .retangulo {
     position: absolute;
-    width: 599px;
-    height: 334px;
+    width: 482px;
+    height: 330px;
     left: 372px;
     top: 331px;
     background: #C4C4C4;
@@ -501,23 +501,30 @@ form.tipo2{
 }
 
 .dv-btn-voltar{
-    text-align: center;
+    text-align: center !important;
 }
 
 .mosaico-boxes{
     transform: translate(0px);
 }
 
-.vid-peq1{
-    /* padding-top: 50px; */
-    padding-left: 80px;
-    padding-right: 150px;
-    /* padding-bottom: 50px; */
-    width: 100%;
+.item1 {
+    grid-area: myArea;
+  }
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 'myArea myArea .' 'myArea myArea .';
+  grid-gap: 10px;
+  background-color: #837ed4;
+  padding: 100px;
 }
 
-.videos-mos1{
-    padding-top: 25px;
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  
+  font-size: 30px;
 }
 
 /* LISTA */
