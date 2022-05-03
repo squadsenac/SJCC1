@@ -512,19 +512,19 @@ form.tipo2{
     grid-area: myArea;
   }
 
+ 
 .grid-container {
-  display: grid;
+  display:  grid;
   grid-template-areas: 'myArea myArea .' 'myArea myArea .';
   grid-gap: 10px;
-  background-color: #837ed4;
-  padding: 100px;
+  padding: 50px;
+  justify-content: center;
 }
 
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  
+  text-align: center !important;
   font-size: 30px;
+  padding: 10px 0;
 }
 
 /* LISTA */
