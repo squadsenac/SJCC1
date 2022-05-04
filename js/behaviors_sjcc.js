@@ -1,6 +1,6 @@
 
-    let btn_lista = document.getElementById("Lista");
-    let btn_mosaico = document.getElementById("Mosaico");
+    let btn_lista = document.getElementById("lista");
+    let btn_mosaico = document.getElementById("mosaico");
     let btn_thumbs = document.getElementById("thumbs");
     let btn_prev = document.getElementById("link-prev");
     let bnt_add_tag = document.getElementById("plus");
