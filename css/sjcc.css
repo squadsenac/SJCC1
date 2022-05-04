@@ -454,8 +454,7 @@ div .link{
 }
 
 .top_menu{
-    padding-left: 50px;
-    height: 130px;
+    justify-content: right;
 }
 
 .logo_materia{
@@ -464,7 +463,7 @@ div .link{
 
 .img-reportagem {
 
-    position: static;
+    position: center;
     width: 600px;
     height: 400px;
     margin-left: 60px;
@@ -536,14 +535,25 @@ div .link{
       text-align: center;
   }
 
-  .descri-video{
+  .descri-video > div{
       text-align: center;
+      display: flex;
+      
   }
 
   .tube-vids{
-    text-align: center;
+    display:  grid;
+    grid-template-areas: 'myArea myArea . myArea myArea .';
+    grid-gap: 10px;
+    padding: 50px;
+    justify-content: center;
   }
-
+ 
+  .tube-vids > div{
+    text-align: center !important;
+    padding: 10px 0;
+    background-color: rgb(255, 255, 16);
+  }
 
   /* MOSAICO */
 
