@@ -442,39 +442,6 @@ form.tipo2{
     padding-top: 50px;
   }
 
-  .retangulo {
-    position: absolute;
-    width: 482px;
-    height: 330px;
-    left: 372px;
-    top: 331px;
-    background: #C4C4C4;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-}
-
-.retangulozinho{
-    position: absolute;
-    width: 265px;
-    height: 167px;
-    left: 706px;
-    top: 331px;
-    background: #C4C4C4;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-}
-
-.retangulo2{
-    position: absolute;
-    width: 265px;
-    height: 167px;
-    left: 706px;
-    top: 498px;
-    background: #C4C4C4;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-}
-
 .texto{
     position: absolute;
     left: 520px;
