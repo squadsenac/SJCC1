@@ -153,7 +153,7 @@ p.contato{
     background-color: #ffffff;
 }
 
-.plus{
+.btn_tags{
     position:static;
     top: 353px;
     height: 20px;
@@ -162,11 +162,7 @@ p.contato{
     background-color: #ffffff;
 }
 
-.res-tags{
-    position:static;
-    top: 0px;
-    height: 20px;
-    padding-left: 0px;
+#res-tags{
     border-width: 0px !important;
     background-color: #ffffff;
 }
