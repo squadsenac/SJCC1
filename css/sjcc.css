@@ -303,12 +303,12 @@ form.tipo2{
     padding: 0 !important;
     font-weight: 400 !important;
     color: #212529 !important;
-    text-align: left !important;
+    text-align: center !important;
 }
 
 .nav-top {
     height: 170px; 
-    background-color: white !important; 
+    background-color: rgb(255, 255, 255) !important; 
     border-top:0px solid #dbdbdb; 
     border-bottom:1px solid #dbdbdb;
 }
@@ -316,6 +316,8 @@ form.tipo2{
 .nav-container {
     padding-left: 10% !important; 
     padding-right: 10% !important;
+    background-color: white;
+    position: relative;
 }
 
 .img-nav {
@@ -333,8 +335,7 @@ form.tipo2{
 }
 
 .img-logo {
-
-    position: static !important;
+    
     width: 150px;
     max-width: 200px;
     /* height: auto; */
@@ -383,40 +384,24 @@ form.tipo2{
     
 }
 
-.wrapper {
-    display: flex;
+.item1 {
+    grid-area: myArea;
   }
-  
-  .wrapper>.left {
-    flex: 1 0 20%;
-    margin-left: 100px;
-    margin-top: 50px;
-    height: 0px;
 
-  }
-  
-  .wrapper>.right {
-    flex: 0 0 50%;
-    display: grid;
-    flex-direction: column;
-    margin-top: 50px;
-  }
-  
-  .wrapper>.right>.vid-wrapper {
-    display: flex;
-  }
-  
-  .wrapper>.right>.vid-wrapper>.video {
-    flex: 1 0 55%;
-  }
-  
-  .wrapper>.right>.vid-wrapper>.video>iframe {
-    max-width: 80%;
-  }
-  
-  .wrapper>.right>.vid-wrapper>.info {
-    flex: 0 0 55%;
-  }
+ 
+.grid-container {
+  display:  grid;
+  grid-template-areas: 'myArea myArea .' 'myArea myArea .';
+  grid-gap: 10px;
+  padding: 50px;
+  justify-content: center;
+}
+
+.grid-container > div {
+  text-align: center !important;
+  font-size: 30px;
+  padding: 10px 0;
+}
 
   /* PÁGINA DE EXEMPLO - REPORTAGEM - LISTA DE VIDEOS*/
 
