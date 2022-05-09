@@ -71,7 +71,7 @@
 
                         <div class="col">
 
-                            <div style="padding-top: 15px;">
+                            <div id="adj-pad-numvids" style="padding-top: 15px;">
 
                                 <div class="card" style="border-radius: 25px;">
 
@@ -85,7 +85,7 @@
                                     <div class="num_videos" style="text-align: left; padding-bottom: 20px; padding-left: 20px;">
                                         <form action="">
                                             <label for="numero">Número de vídeos:</label>
-                                            <input type="number" id="numero" name="numero" min="1" max="10"></input>
+                                            <input type="number" id="numero" name="numero" min="1" max="10" value="1"></input>
                                         </form>
                                     </div>
             
@@ -195,13 +195,18 @@
                                 <!--Calendario-->
                                 <div class="cal-datas" >
                                     <form action="">
-                                        <label class= "de" for= "date">De:</label>
-                                        <input class="date2" type= "date" id= "date" name= "date" 
-                                        value= "0000-00-00" placeholder=""><br><br>
-                            
-                                        <label class= "ate" for= "date">Até:</label>
-                                        <input class="date2" type= "date" id= "date" name= "date" 
-                                        value= "0000-00-00" placeholder="">
+                                        <div class="row" style="padding-top: 6px;">
+                                            <div class="col-6" style="text-align: center;">
+                                                <label class= "de" for= "date">De:</label>
+                                                <input class="date2" type= "date" id= "date" name= "date" 
+                                                value= "0000-00-00" placeholder=""><br><br>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class= "ate" for= "date">Até:</label>
+                                                <input class="date2" type= "date" id= "date" name= "date" 
+                                                value= "0000-00-00" placeholder="">
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                                 <br>
@@ -215,6 +220,8 @@
 
             </div>
         </div>
+
+        <!-- Seção de Código -->
         
         <div class="row">
 
@@ -226,65 +233,83 @@
                         <h5 style="text-align: center; color: white;">Código</h3>
                     </div>
                     <div class="card-body">
-                        <p class="card-text">Campo de pré-visualização de código e resultado final.</p>
-
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Código</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Preview do site</button>
-                            </li>
-                        </ul>
-            
-                        <div class="tab-content" id="myTabContent">
-
-                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="border: 50px; background-color: white;">
-                                        
+                                           
                                         <div class="row" style="padding-top: 15px;">
                                             
-                                            <div class="col-1">
+                                            <div class="col-4" style="text-align: right;">
 
                                                 <button type="button" class="btn btn-primary" style="padding: 5px; background-color: red;">Gerar código</button>
+                                                <button type="button" class="btn btn-primary" style="padding: 5px; background-color: blue;">Copiar Código</button>
+                                                
                                             
                                             </div>
 
-                                            <div class="col-11">
+                                            <div class="col-8">
 
-                                                <div class="input-group">
-                                                    
-                                                    <textarea class="form-control" aria-label="With textarea" readonly style="height: 500px;">Código</textarea>
-                                                </div>
+                                                <p style="font-size: 11px; font-style:italic; padding-top:10px;">Clique em "Gerar Código" para gerar um código HTML com as opções escolhidas. Clique em "Copiar Código" para copiar para a área de transferência.</p>
             
                                             </div>
 
+                                            
+
                                         </div>
-                                        
-                                    </div>
-  
-                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 
-                                        <div class="row" style="padding-top: 15px;">
-                                            
-                                            <div class="col-1">
+                                        <div class="row" style="padding-top: 10px;">
 
-                                                <a id="link-prev" href="" target="iframe_prev"><button type="button" class="btn btn-primary" style="padding: 5px; background-color: red;">Gerar Preview</button></a>
-                                            
+                                            <div class="input-group">            
+                                                <textarea class="form-control" aria-label="With textarea" readonly style="height: 500px;">Código</textarea>
                                             </div>
 
-                                            <div class="col-11">
+                                        </div>
+                                    
+                    </div>
+                    
+                </div>
+
+            </div>
+           
+           
+        </div>
+
+        <!-- Seção de Preview -->
+
+        <div class="row">
+
+            <div style="padding-top: 15px;">
+
+                <div class="card" style="border-radius: 25px;">
+
+                    <div class="card-header" style="border-top-left-radius: 25px; border-top-right-radius: 25px; background-color: red;">
+                        <h5 style="text-align: center; color: white;">Preview</h3>
+                    </div>
+                    <div class="card-body">
+
+                                        <div class="row" style="padding-top: 15px; padding-bottom: 15px;">
+                                            
+
+                                            <div class="col-4" style="text-align: right;">
                                                
-                                                  
-                                                    <iframe src="./index-materia-lista.html" height="500" width="1160" title="Iframe Preview" style="border: 13px;" name="iframe_prev"></iframe>
+                                                <a id="link-prev" href="" target="iframe_prev"><button type="button" class="btn btn-primary" style="padding: 5px; background-color: red;">Gerar Preview</button></a>    
             
                                             </div>
 
+                                            <div class="col-8" style="text-align: left;">
+                                               
+                                                <p style="font-size: 11px; font-style:italic; padding-top:10px;">Clique em "Gerar Preview" para gerar uma pré-visualização do resultado final em uma página de exemplo.</p>     
+            
+                                            </div>
+
+                                            
+                                           
                                         </div>
 
-                                    </div>
-                        </div> 
+                                        <div class="row">
 
-                       
+                                            <hr>
+
+                                            <iframe src="./index-materia-lista.html" height="500" width="1160" title="Iframe Preview" style="border: 13px;" name="iframe_prev"></iframe>
+
+                                        </div>
 
                     </div>
                     
@@ -294,6 +319,8 @@
            
            
         </div>
+
+        <!-- Status do Sistema -->
 
         <div class="row">
 
