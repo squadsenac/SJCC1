@@ -353,7 +353,7 @@ form.tipo2{
 .img-reportagem {
 
     position: center;
-    width: 800px;
+    width: 600px;
     height: 400px;
     margin-left: 60px;
     margin-top: 50px;
@@ -406,20 +406,6 @@ form.tipo2{
       text-align: center;
       display: flex;
       
-  }
-
-  .tube-vids{
-    display:  grid;
-    grid-template-areas: 'myArea myArea . myArea myArea .';
-    grid-gap: 10px;
-    padding: 50px;
-    justify-content: center;
-  }
- 
-  .tube-vids > div{
-    text-align: center !important;
-    padding: 10px 0;
-    background-color: rgb(255, 255, 16);
   }
 
   /* MOSAICO */
