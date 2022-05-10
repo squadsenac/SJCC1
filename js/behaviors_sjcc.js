@@ -22,7 +22,7 @@
     });
 
     btn_thumbs.addEventListener('click', function(){
-                btn_prev.href = "./thumbs.html";
+                btn_prev.href = "./index-materia-thumbs.html";
     });
 
     //Função para criar tags, contar o número de criadas e deletá-las apertendo o 'X'.
