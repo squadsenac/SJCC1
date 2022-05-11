@@ -4,6 +4,7 @@
     let btn_thumbs = document.getElementById("thumbs");
     let btn_prev = document.getElementById("link-prev");
     let bnt_add_tag = document.getElementById("plus");
+    let bnt_res_tag = document.getElementById("res-tags");
     var field_aviso = document.getElementById("aviso_tags");
     let tagsVars = [];
 
@@ -13,15 +14,15 @@
 
     //Urls de acordo com o tipo de Organização(a revisar, funcionou na primeira pagina de tags, agora parou de funcionar)
     btn_lista.addEventListener('click', function(){
-                btn_prev.href = "./lista.html";
+                btn_prev.href = "./index-materia-lista.html";
     });
 
     btn_mosaico.addEventListener('click', function(){
-                btn_prev.href = "./mosaico.html";
+                btn_prev.href = "./index-materia.html";
     });
 
     btn_thumbs.addEventListener('click', function(){
-                btn_prev.href = "./thumbs.html";
+                btn_prev.href = "./index-materia-thumbs.html";
     });
 
     //Função para criar tags, contar o número de criadas e deletá-las apertendo o 'X'.
@@ -59,6 +60,19 @@
         };
 
     };
+
+    function resetTags(){
+
+        if(countTag >1){
+            for(let i = 1; i<=8; i++){
+                let pillTag = document.getElementById("tag" + i);
+                pillTag.remove();
+            }
+
+            countTag = 1;
+            field_aviso.innerHTML = countTag -1 + " /8 tags adicionadas."
+        }
+    }
 
     
     //Função para gerar código com o botão a partir de Tags, datas e organização.
