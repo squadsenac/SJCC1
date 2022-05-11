@@ -688,5 +688,18 @@ div .link{
 
 .descri-video {
     font-weight: bold;
-    font-size: 23px;
+    font-size: 28px;
+    text-align:justify ;
+    padding-top: 25px;
+}
+
+.topico{
+    color:red;
+    font-weight:bold;
+    font-size: 13px;
+}
+
+.card{
+    padding-top: 15px;
+    padding-bottom: 25px;
 }
