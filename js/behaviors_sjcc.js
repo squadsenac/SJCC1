@@ -18,7 +18,7 @@
     });
 
     btn_mosaico.addEventListener('click', function(){
-                btn_prev.href = "./index-materia.html";
+                btn_prev.href = "./index-materia-mosaico.html";
     });
 
     btn_thumbs.addEventListener('click', function(){
