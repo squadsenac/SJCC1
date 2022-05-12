@@ -618,6 +618,25 @@ div .link{
     width: 100%;
 }
 
+.item1 {
+    grid-area: myArea;
+  }
+
+ 
+.grid-container {
+  display:  grid;
+  grid-template-areas: 'myArea myArea .' 'myArea myArea .';
+  grid-gap: 10px;
+  padding: 50px;
+  justify-content: center;
+}
+
+.grid-container > div {
+  text-align: center !important;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
 .videos-mos1{
     padding-top: 25px;
 }
