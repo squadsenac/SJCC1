@@ -643,6 +643,11 @@ div .link{
 
 /* LISTA */
 
+.tit-previews {
+    font-weight: bold;
+    padding-top: 50px;
+}   
+
 .body-lista{
     padding: 30px 50px;
     float: center;
