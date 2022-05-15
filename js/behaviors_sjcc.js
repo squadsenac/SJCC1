@@ -67,10 +67,12 @@
             for(let i = 1; i<=8; i++){
                 let pillTag = document.getElementById("tag" + i);
                 pillTag.remove();
+                countTag--;
+                field_aviso.innerHTML = countTag -1 + " /8 tags adicionadas."
             }
 
-            countTag = 1;
-            field_aviso.innerHTML = countTag -1 + " /8 tags adicionadas."
+           
+           
         }
     }
 
