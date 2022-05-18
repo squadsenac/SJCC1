@@ -15,6 +15,10 @@
     <!-- Bootstrap Date-Picker Plugin -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    
+    <!-- Icons Bootstrap -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 
     <title>Página de Busca e Geração de Código</title>
   </head>
@@ -219,7 +223,7 @@
             </div>
         </div>
 
-        <!-- Seção de Código -->
+        <!-- Seção de Código e Preview -->
         
         <div class="row">
 
@@ -245,15 +249,16 @@
                             <div class="tab-pane active" id="codigo" role="tabpanel" aria-labelledby="home-tab">
                                 <div class="row" style="padding-top: 15px;">
                                             
-                                    <div class="col-4" style="text-align: right;">
+                                    <div class="col-3" style="text-align: right;">
 
                                         <button id="btnCodigo" type="button" class="btn btn-primary" style="padding: 5px; background-color: red;" onclick="gerarCodigo()">Gerar código</button>
-                                        <button type="button" class="btn btn-primary" style="padding: 5px; background-color: blue;">Copiar Código</button>
+                                        <!-- <button type="button" class="btn btn-primary" style="padding: 5px; background-color: blue;">Copiar Código</button> -->
+                                        
                                         
                                     
                                     </div>
 
-                                    <div class="col-8">
+                                    <div class="col-9">
 
                                         <p style="font-size: 11px; font-style:italic; padding-top:10px;">Clique em "Gerar Código" para gerar um código HTML com as opções escolhidas. Clique em "Copiar Código" para copiar para a área de transferência.</p>
     
@@ -265,8 +270,11 @@
 
                                 <div class="row" style="padding-top: 10px;">
 
-                                    <div class="input-group">            
-                                        <textarea id="areaCodigo" class="form-control" aria-label="With textarea" readonly style="height: 500px;"></textarea>
+                                    <div class="input-group" style="position: relative;"> 
+
+                                        <textarea id="areaCodigo" class="form-control" aria-label="With textarea" readonly style="height: 500px; position: relative;"></textarea>
+                                        <a href=""><span class="icon-user" style="position: absolute; left: 1230px; top: 5px;"><i class="bi bi-filetype-html" style="font-size: 30px;"></i></span></a>
+
                                     </div>
 
                                 </div>
