@@ -63,14 +63,15 @@
 
     function resetTags(){
 
+        let numpills = countTag;
+
         if(countTag >1){
-            for(let i = 1; i<=8; i++){
+            for(let i = 1; i<=numpills; i++){
                 let pillTag = document.getElementById("tag" + i);
                 pillTag.remove();
                 countTag--;
-                field_aviso.innerHTML = countTag -1 + " /8 tags adicionadas."
-            }
-
+                field_aviso.innerHTML = countTag -1 + " /8 tags adicionadas."                
+            } 
            
            
         }
