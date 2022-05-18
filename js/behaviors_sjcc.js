@@ -11,6 +11,8 @@
     let inputTitulo = document.getElementById("inp-titulo").value;
     let optLayout = 0;
 
+    let tagsVars = [];
+
     // Contagem de Tags
     var countTag = 1;
     field_aviso.innerHTML = countTag-1 + " /8 tags adicionadas."
