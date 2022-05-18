@@ -32,19 +32,29 @@
            
                         <div style="background-image: url('./src/recife-antigo.jpg'); background-attachment: fixed; border-radius: 25px;">
 
-                            <img src="./src/logo-jc.png" class="img-fluid" alt="logo jc" style="width: 40%; height: 65%; transform: translateX(150px); padding-top: 50px;">
+                            <img src="./src/logo-jc.png" class="img-fluid" alt="logo jc" style="width: 25%; height: 37%; transform: translateX(230px); padding-top: 30px;">
                             <p class="titulo_pag_tags" style="text-align: center; padding: 20px; color: white; font-weight: bolder; font-size: larger;">Vídeos para rodapé de matérias</p>
                                 
                         </div>
- 
+
                         <div class="card" style="border-radius: 25px;">
                             <div class="card-header" style="border-top-left-radius: 25px; border-top-right-radius: 25px; background-color: red;">
-                            <h5 style="text-align: center; color: white;">Estilo de Layout</h3>
+                            <h5 style="text-align: center; color: white;">Configurações de Layout</h3>
                             </div>
                             <div class="card-body">
-                            <p class="card-text">Escolha um estilo de layout de vídeo</p>
+
+                                <!-- Campo de título -->
+
+                                <p class="card-text">1 - Escolha um título para o layout de vídeo.</p>
+
+                                <div style="padding-top: 5px;">
+                                    <label for="inp-titulo">Tìtulo:</label>   
+                                    <input id="inp-titulo" type="text" placeholder="Coloque o título aqui.">
+                                </div>
 
                                 <!-- Radio Buttons de Estilo de Layout -->
+
+                                <p class="card-text" style="padding-top: 35px;">2 - Escolha um estilo de layout de vídeo</p>
 
                                 <div class="form-check">
                                     <input id="lista" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
@@ -65,34 +75,22 @@
                                     </label>
                                 </div>
 
-                            </div>
+                                <!-- Nùmero de Vìdeos -->
 
-                        </div>
+                                <p class="card-text" style="padding-top: 35px;">3 - Escolha o número de vídeos a serem incluídos na página.</p>
 
-                        <div class="col">
-
-                            <div id="adj-pad-numvids" style="padding-top: 15px;">
-
-                                <div class="card" style="border-radius: 25px;">
-
-                                    <div class="card-header" style="border-top-left-radius: 25px; border-top-right-radius: 25px; background-color: red;">
-                                        <h5 style="text-align: center; color: white;">Número de vídeos</h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-text">Escolha o número de vídeos a serem incluídos na página.</p>
-                                    </div>
-            
-                                    <div class="num_videos" style="text-align: left; padding-bottom: 20px; padding-left: 20px;">
-                                        <form action="">
-                                            <label for="numero">Número de vídeos:</label>
-                                            <input type="number" id="numero" name="numero" min="1" max="10" value="1"></input>
-                                        </form>
-                                    </div>
-            
+                                <div class="num_videos" style="text-align: left; padding-bottom: 20px; padding-left: 0px;">
+                                    <form action="">
+                                        <label for="numero">Número de vídeos:</label>
+                                        <input type="number" id="numero" name="numero" min="1" max="10" value="1"></input>
+                                    </form>
                                 </div>
-            
+
                             </div>
+
                         </div>
+
+                    
 
             </div>           
 
@@ -230,87 +228,83 @@
                 <div class="card" style="border-radius: 25px;">
 
                     <div class="card-header" style="border-top-left-radius: 25px; border-top-right-radius: 25px; background-color: red;">
-                        <h5 style="text-align: center; color: white;">Código</h3>
+                        <h5 style="text-align: center; color: white;">Código</h3>       
                     </div>
                     <div class="card-body">
-                                           
-                                        <div class="row" style="padding-top: 15px;">
+
+                        <ul class="nav nav-tabs card-header-tabs">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="true" type="button" data-bs-toggle="tab" data-bs-target="#codigo">Código</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="false" type="button" data-bs-toggle="tab" data-bs-target="#preview">Preview</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="codigo" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="row" style="padding-top: 15px;">
                                             
-                                            <div class="col-4" style="text-align: right;">
+                                    <div class="col-4" style="text-align: right;">
 
-                                                <button type="button" class="btn btn-primary" style="padding: 5px; background-color: red;">Gerar código</button>
-                                                <button type="button" class="btn btn-primary" style="padding: 5px; background-color: blue;">Copiar Código</button>
-                                                
-                                            
-                                            </div>
-
-                                            <div class="col-8">
-
-                                                <p style="font-size: 11px; font-style:italic; padding-top:10px;">Clique em "Gerar Código" para gerar um código HTML com as opções escolhidas. Clique em "Copiar Código" para copiar para a área de transferência.</p>
-            
-                                            </div>
-
-                                            
-
-                                        </div>
-
-                                        <div class="row" style="padding-top: 10px;">
-
-                                            <div class="input-group">            
-                                                <textarea class="form-control" aria-label="With textarea" readonly style="height: 500px;">Código</textarea>
-                                            </div>
-
-                                        </div>
+                                        <button id="btnCodigo" type="button" class="btn btn-primary" style="padding: 5px; background-color: red;" onclick="gerarCodigo()">Gerar código</button>
+                                        <button type="button" class="btn btn-primary" style="padding: 5px; background-color: blue;">Copiar Código</button>
+                                        
                                     
-                    </div>
-                    
-                </div>
+                                    </div>
 
-            </div>
-           
-           
-        </div>
+                                    <div class="col-8">
 
-        <!-- Seção de Preview -->
+                                        <p style="font-size: 11px; font-style:italic; padding-top:10px;">Clique em "Gerar Código" para gerar um código HTML com as opções escolhidas. Clique em "Copiar Código" para copiar para a área de transferência.</p>
+    
+                                    </div>
 
-        <div class="row">
+                                    
 
-            <div style="padding-top: 15px;">
+                                </div>
 
-                <div class="card" style="border-radius: 25px;">
+                                <div class="row" style="padding-top: 10px;">
 
-                    <div class="card-header" style="border-top-left-radius: 25px; border-top-right-radius: 25px; background-color: red;">
-                        <h5 style="text-align: center; color: white;">Preview</h3>
-                    </div>
-                    <div class="card-body">
+                                    <div class="input-group">            
+                                        <textarea id="areaCodigo" class="form-control" aria-label="With textarea" readonly style="height: 500px;"></textarea>
+                                    </div>
 
-                                        <div class="row" style="padding-top: 15px; padding-bottom: 15px;">
+                                </div>
+                            
+                            </div>
+
+                            <div class="tab-pane" id="preview" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="row" style="padding-top: 15px; padding-bottom: 15px;">
                                             
 
-                                            <div class="col-4" style="text-align: right;">
-                                               
-                                                <a id="link-prev" href="" target="iframe_prev"><button type="button" class="btn btn-primary" style="padding: 5px; background-color: red;">Gerar Preview</button></a>    
-            
-                                            </div>
+                                    <div class="col-4" style="text-align: right;">
+                                       
+                                        <a id="link-prev" href="" target="iframe_prev"><button type="button" class="btn btn-primary" style="padding: 5px; background-color: red;">Gerar Preview</button></a>    
+    
+                                    </div>
 
-                                            <div class="col-8" style="text-align: left;">
-                                               
-                                                <p style="font-size: 11px; font-style:italic; padding-top:10px;">Clique em "Gerar Preview" para gerar uma pré-visualização do resultado final em uma página de exemplo.</p>     
-            
-                                            </div>
+                                    <div class="col-8" style="text-align: left;">
+                                       
+                                        <p style="font-size: 11px; font-style:italic; padding-top:10px;">Clique em "Gerar Preview" para gerar uma pré-visualização do resultado final em uma página de exemplo.</p>     
+    
+                                    </div>
 
-                                            
+                                    
+                                   
+                                </div>
+
+                                <div class="row-cols-1">
+
+                                    <hr>
+
+                                    <iframe src="./index-materia-lista.html" height="500" width="1260" title="Iframe Preview" style="border: 13px;" name="iframe_prev"></iframe>
+
+                                </div>
+                            </div>
+
+                        </div>
                                            
-                                        </div>
-
-                                        <div class="row">
-
-                                            <hr>
-
-                                            <iframe src="./index-materia-lista.html" height="500" width="1160" title="Iframe Preview" style="border: 13px;" name="iframe_prev"></iframe>
-
-                                        </div>
-
+                                        
                     </div>
                     
                 </div>
