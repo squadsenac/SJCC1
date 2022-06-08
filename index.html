@@ -53,7 +53,7 @@
 
                                 <div style="padding-top: 5px;">
                                     <label for="inp-titulo">Tìtulo:</label>   
-                                    <input id="inp-titulo" type="text" placeholder="Coloque o título aqui.">
+                                    <input id="inp-titulo" type="text" placeholder="Coloque o título aqui." oninput="getVal()">
                                 </div>
 
                                 <!-- Radio Buttons de Estilo de Layout -->
@@ -76,6 +76,18 @@
                                     <input id="thumbs" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                                     <label class="form-check-label" for="flexRadioDefault2">
                                     Thumbnails
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="moslist" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                    Mosaico + Lista
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="mosthumb" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Mosaico + Thumbnails
                                     </label>
                                 </div>
 
@@ -107,9 +119,9 @@
                     </div>
                     <div class="card-body">
                         
-                        <p class="card-text">Crie tags para filtrar a busca.</p>
+                        <p class="card-text">Crie tags para filtrar a busca.*</p>
 
-                            <div style="text-align: left; padding-bottom: 12px; padding-top: 0px;">
+                            <div style="text-align: left; padding-bottom: 0px; padding-top: 0px;">
 
                                 <div>
 
@@ -170,6 +182,12 @@
                                    
                                 </div>
 
+                                <div style="padding-top:20px ;">
+                                    <p style="font-size: 12px;">*As tags selecionadas serão usadas em buscas em títulos caso não existam tags assimiladas
+                                        no video do Youtube.
+                                    </p>
+                                </div>
+
                           
                         </div>
 
@@ -181,7 +199,7 @@
 
                 <div class="col">
 
-                    <div style="padding-top: 15px;">
+                    <div style="padding-top: 10px;">
 
                         <div class="card" style="border-radius: 25px;">
 
@@ -273,7 +291,7 @@
                                     <div class="input-group" style="position: relative;"> 
 
                                         <textarea id="areaCodigo" class="form-control" aria-label="With textarea" readonly style="height: 500px; position: relative;"></textarea>
-                                        <a href=""><span class="icon-user" style="position: absolute; left: 1230px; top: 5px;"><i class="bi bi-filetype-html" style="font-size: 30px;"></i></span></a>
+                                        <a onclick="copiarCodigo()"><span class="icon-user" style="position: absolute; left: 1205px; top: 5px;"><i class="bi bi-filetype-html" style="font-size: 30px;"></i></span></a>
 
                                     </div>
 
@@ -287,7 +305,7 @@
 
                                     <div class="col-4" style="text-align: right;">
                                        
-                                        <a id="link-prev" href="" target="iframe_prev"><button type="button" class="btn btn-primary" style="padding: 5px; background-color: red;">Gerar Preview</button></a>    
+                                        <a id="link-prev" href="" target="iframe_prev"><button type="button" class="btn btn-primary" style="padding: 5px; background-color: red;" onclick="gerarPreview()">Gerar Preview</button></a>    
     
                                     </div>
 
@@ -305,7 +323,7 @@
 
                                     <hr>
 
-                                    <iframe src="./index-materia-lista.html" height="500" width="1260" title="Iframe Preview" style="border: 13px;" name="iframe_prev"></iframe>
+                                    <iframe sandbox="allow-presentation allow-same-origin allow-scripts" src="./index-materia-lista.html" height="500" width="1260" title="Iframe Preview" style="border: 13px;" name="iframe_prev" id="iframe-prev"></iframe>
 
                                 </div>
                             </div>
@@ -345,7 +363,6 @@
 
 
     </div>  
-
 
     <script src="./js/behaviors_sjcc.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
