@@ -368,7 +368,19 @@
             console.log("Texto copiado");
         }
 
-        
+         function ativarCampos(){
+            let arq = document.getElementById("formFile");
+            let url = document.getElementById("basic-url");
+            let chk = document.getElementById("chk-files");
+            if(arq.disabled == true & url.disabled == true){
+                arq.disabled = false;
+                url.disabled = false;
+            }else{
+                arq.disabled = true;
+                url.disabled = true;
+            }
+        }
+
 
           
         
