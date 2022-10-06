@@ -44,18 +44,6 @@ router.get('/logout', (req, res) => {
   //res.render('index', { title: 'Gerador de Layout de Video SJCC' });
 });
 
-router.get('/busca/', function(req, res, next) {
-  //res.render('busca', { title: 'Gerador de Layout de Video SJCC', usuario:`${req.user.displayName}` });
-});
-
-router.post('/preview/', function(req, res, next) {
-let estilo = req.body.estilo-layout;
-});
-
-router.get('/codigo/', function(req, res, next) {
-  res.render('index-materia-lista', { title: 'Rodapé tipo lista' });
-});
-
 router.post('/gerar-layouts/', function(req, res, next) {
   let layout = gerarCodigo(req.body.estilo-layout, req.body.titulo, req.body.query, req.body.numero, req.body.order);
   //let status = "Layout gerado com sucesso!";
