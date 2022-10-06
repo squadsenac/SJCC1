@@ -7,6 +7,8 @@ const dotenv = require('dotenv');
 const session = require('express-session');
 const passport = require('passport');
 
+dotenv.config();
+
 var indexRouter = require('./routes/index');
 
 

@@ -1,6 +1,8 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
-const API_KEY = "AIzaSyCMVvtWwzEooexyKHBuYV9a7VhxpB9hEyc";
+const dotenv = require('dotenv');
+dotenv.config();
+const API_KEY = process.env.YT_API_KEY;
 
 async function pegarVideos(query, resultsPerPage, order){
     let idSJCC = "";
@@ -21,7 +23,7 @@ async function pegarVideos(query, resultsPerPage, order){
 
     for(let i = 0; i < data.items.length; i++){
         vidlinks[i] = tubeURL.concat(data.items[i].id.videoId);
-        //console.log(vidlinks[i]);
+        console.log(vidlinks[i]);
     }
 
     return vidlinks;

@@ -11,7 +11,9 @@ function isLoggedIn(req, res, next) {
 
 router.get('/', function(req, res, next) {
   //res.send('<a href="/auth/google">Authenticate with Google</a>');
- 
+  let codigo = gerarCodigo("lista", "teste", "crime", 10, "date");
+  console.log(codigo);
+  res.send(codigo);
 });
 
 router.get('/protected', isLoggedIn, (req, res) => {
@@ -54,8 +56,9 @@ router.get('/codigo/', function(req, res, next) {
 });
 
 router.post('/gerar-layouts/', function(req, res, next) {
-  gerarCodigo(req.body.estilo-layout, req.body.titulo, req.body.query, req.body.numero, req.body.order);
-  let status = "Layout gerado com sucesso!";
+  let layout = gerarCodigo(req.body.estilo-layout, req.body.titulo, req.body.query, req.body.numero, req.body.order);
+  //let status = "Layout gerado com sucesso!";
+  console.log(layout);
   res.redirect("/"); 
 });
 
