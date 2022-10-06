@@ -12,8 +12,9 @@ function isLoggedIn(req, res, next) {
 router.get('/', function(req, res, next) {
   //res.send('<a href="/auth/google">Authenticate with Google</a>');
   let codigo = gerarCodigo("lista", "teste", "crime", 10, "date");
+  let parsed = JSON.stringify(codigo);
   console.log(codigo);
-  res.send(codigo);
+  res.send(`${parsed}`);
 });
 
 router.get('/protected', isLoggedIn, (req, res) => {

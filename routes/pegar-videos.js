@@ -23,7 +23,7 @@ async function pegarVideos(query, resultsPerPage, order){
 
     for(let i = 0; i < data.items.length; i++){
         vidlinks[i] = tubeURL.concat(data.items[i].id.videoId);
-        console.log(vidlinks[i]);
+        //console.log(vidlinks[i]);
     }
 
     return vidlinks;
