@@ -1,86 +1,31 @@
 const fs = require("fs");
 const fetch = require("node-fetch");
+const layouts = require("./layout-helpers");
 var {pegarVideos} = require('./pegar-videos');
 
 async function gerarCodigo(optLayout, titRodape, query, resultsPerPage, order){
 
-    let vidlinks = await pegarVideos(query, resultsPerPage, order);
+    let linksvideos = await pegarVideos(query, resultsPerPage, order);
 
     let codigoFinal = '';
 
         if(optLayout == "lista"){
-                    
-                codigoFinal = `
-                
+
+            let cabecalho = `
                 <div class="col-8">
-
                 <h4 class="tit-previews">${titRodape}</h4>
-                <br>
-
-                <div id= "card2" class="card mb-3 rounded-0 border-0 border-bottom" style="max-width: auto;">
-                    <div class="row g-0">   
-                        <div class="col">
-                                <iframe width="471" height="265" src=${vidlinks[0]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            
-                        </div>
-                        <div class="col">
-                            <div class="card-body">
-                                        <span class= "topico">COLUNA MOBILIDADE</span>
-                                    <h5 class="descri-video">Começam as obras de triplicação da BR 232 na saída do Recife</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id= "card2" class="card mb-3 rounded-0 border-0 border-bottom" style="max-width: auto; ">
-                    <div class="row g-0">
-                        <div class="col">
-                                <iframe width="471" height="265" src=${vidlinks[1]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            
-                        </div>
-                        <div class="col">
-                            <div class="card-body">
-                                    <span class= "topico">COLUNA MOBILIDADE</span>
-                                <h5 class="descri-video">SEMANA SANTA: três PESSOAS ficam FERIDAS em ENGAVETAMENTO na BR 232</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id= "card2" class="card mb-3 rounded-0 border-0 border-bottom" style="max-width: auto; ">
-                    <div class="row g-0">
-                        <div class="col">
-                                <iframe width="471" height="265" src=${vidlinks[2]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            
-                        </div>
-                        <div class="col">
-                            <div class="card-body">
-                                    <span class= "topico">COLUNA MOBILIDADE</span> <!--Classe nova-->
-                                <h5 class="descri-video">Pernambuco tem três rodovias entre as dez piores do País</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id= "card2" class="card mb-3 rounded-0  border-0 " style="max-width: auto; ">
-                    <div class="row g-0">
-                        <div class="col">
-                                <iframe width="471" height="265" src=${vidlinks[3]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            
-                        </div>
-                        <div class="col">
-                            <div class="card-body">
-                                    <span class= "topico">COLUNA MOBILIDADE</span>
-                                <h5 class="descri-video">Pedágios em Pernambuco: Saiba quais e serão as praças de pedágio das rodovias de Estado</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>`;
+                <br>`
+            let geralista = layouts.lista(resultsPerPage, linksvideos);
+            let tagfecha = `</div>`
+                    
+            codigoFinal = cabecalho.concat(geralista, tagfecha);
+        
         }else if(optLayout == "mosaico"){
-
-            areaCodigo.innerText = ` <div class="grid-container">
-            <div class="item1"><iframe width="482" height="345" src=${vidlinks[0]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div> 
-            <div class="item2"><iframe width="250" height="169" src=${vidlinks[1]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div class="item3"><iframe width="250" height="169" src=${vidlinks[2]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>  
-            </div>    
-            </div>
+            let geramosaico = layouts.mosaico(resultsPerPage, linksvideos);
+            codigoFinal = `
+            <div class="grid-container">\r\n
+                ${geramosaico}\r\n
+            </div>\r\n
             <h4 class="tit-previews">${titRodape}</h4>`;
 
         }else if(optLayout == "thumbnails"){
@@ -205,6 +150,6 @@ async function gerarCodigo(optLayout, titRodape, query, resultsPerPage, order){
         return codigoFinal;
 }
 
-//gerarCodigo("lista", "teste", "crime", 10, "date");
+gerarCodigo("mosaico", "teste", "crime", 10, "date");
 
 module.exports = {gerarCodigo}
