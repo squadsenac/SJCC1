@@ -12,8 +12,8 @@ const layouts = {
                                 </div>
                                 <div class="col">
                                     <div class="card-body">
-                                                <span class= "topico">COLUNA MOBILIDADE</span>
-                                            <h5 class="descri-video">Começam as obras de triplicação da BR 232 na saída do Recife</h5>
+                                                <span class= "topico">${linksvideos.titles[i]}</span>
+                                            <h5 class="descri-video">${linksvideos.descritivos[i]}</h5>
                                     </div>
                                 </div>
                             </div>
