@@ -12,7 +12,7 @@ const layouts = {
                                 </div>
                                 <div class="col">
                                     <div class="card-body">
-                                                <span class= "topico">${linksvideos.titles[i]}</span>
+                                                <span class= "topico">${linksvideos.titulos[i]}</span>
                                             <h5 class="descri-video">${linksvideos.descritivos[i]}</h5>
                                     </div>
                                 </div>
@@ -56,35 +56,25 @@ const layouts = {
     },
     thumbnails: function (numvids, linksvideos){
         let thumbs = "";
-        let linhas = "";
+        let header = ` <div style = "display: grid; grid-template-columns: repeat(3, 1fr);">`;
+        let closetag = `</div>`;
         let erroMsg = "Adicione um número de vídeos para o seu layout.";
 
-         /*    if(numvids != null && numvids > 0){
-                if(numvids > 2){
+            if(numvids != null && numvids > 0){
                     for (let i=0; i < numvids; i++){
                         let blocothumbs =  `
-                        <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-content: space-between; margin-left: 150px; margin-right: 150px;">  
-                            ${linhas[i]}
-                            <div><iframe  width="405" height="285" src=${linksvideos.links[0]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p style="text-align: center;">Triplicação da BR-232</p></div>
-                            <div><iframe  width="405" height="285" src=${linksvideos.links[1]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p style="text-align: center;">PSG: NEYMAR desvaloriza 132 MILHÕES DE EUROS.</p></div>
-                            <div><iframe  width="405" height="285" src=${linksvideos.links[2]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p style="text-align: center;">PSG: NEYMAR desvaloriza 132 MILHÕES DE EUROS.</p></div>
-                        </div> `;
+                        <div style="display: flex; flex-direction: column; align-items: center ;margin: auto;"><iframe style="margin: 20px;"  width="405" height="285" src=${linksvideos.links[i]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p style="padding: 0px; margin-left: 0px;; word-wrap: break-word; width: 70%; text-align: center;">${linksvideos.titulos[i]}</p></div>
+                         `;
                        
                         thumbs += blocothumbs;
                     }
-                }else{
-                    let blocothumbs =  `
-                    <div style="display: flex; flex-direction:row; justify-content: space-evenly; align-content: space-between; margin-left: 150px; margin-right: 150px;">  
-                        <div><iframe  width="405" height="285" src=${linksvideos.links[0]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p style="text-align: center;">Triplicação da BR-232</p></div>
-                        <div><iframe  width="405" height="285" src=${linksvideos.links[1]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p style="text-align: center;">PSG: NEYMAR desvaloriza 132 MILHÕES DE EUROS.</p></div>
-                    </div> `
-                    thumbs = blocothumbs;
-                }
             }else{
                 console.log(erroMsg);
             }
-            */
-    return thumbs
+
+    let thumbsfinais = header + thumbs + closetag;
+           
+    return thumbsfinais
 },
 };
 
