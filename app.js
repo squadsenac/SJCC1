@@ -18,8 +18,6 @@ dotenv.config();
 
 var indexRouter = require('./routes/index');
 
-
-
 var app = express();
 
 app.use(logger('dev'));

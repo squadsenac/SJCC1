@@ -24,8 +24,7 @@ const layouts = {
                     }else{
                         console.log(erroMsg);
                     }
-                
-            
+                           
             return lista
     },
     mosaico: function(numvids, linksvideos){

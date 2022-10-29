@@ -2,8 +2,8 @@ const fs = require("fs");
 const fetch = require("node-fetch");
 const dotenv = require('dotenv');
 dotenv.config();
-//const API_KEY = process.env.YT_API_KEY;
-const API_KEY = "AIzaSyCMVvtWwzEooexyKHBuYV9a7VhxpB9hEyc";
+const API_KEY = process.env.YT_API_KEY;
+//const API_KEY = "AIzaSyCMVvtWwzEooexyKHBuYV9a7VhxpB9hEyc";
 
 
 async function pegarVideos(query, resultsPerPage, order){
@@ -14,7 +14,7 @@ async function pegarVideos(query, resultsPerPage, order){
       descritivos:[]
     };
     let tubeURL = "https://www.youtube.com/embed/";
-    let url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&type=video&part=snippet&channelId=${idSJCC}&q=${query}`;
+    let url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&type=video&part=snippet&channelId=${idSJCC}&q=${query}&videoEmbeddable=true`;
     if (resultsPerPage) {
         url = `${url}&maxResults=${resultsPerPage}`;
       }else if(resultsPerPage && order){

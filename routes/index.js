@@ -9,22 +9,10 @@ function isLoggedIn(req, res, next) {
   req.user ? next() : res.sendStatus(401);
 }
 
-router.get('/', function(req, res, next) {
+router.get('/', async function(req, res, next) {
   //res.send('<a href="/auth/google">Authenticate with Google</a>');
-
-  async function pegarResultado(){
-    let codigo = await gerarCodigo("lista", "teste", "crime", 10, "date");
-    console.log(codigo);
-    return codigo;
-  }
-
-
-  let resultado = pegarResultado();
-
-  let parsed = JSON.parse(resultado);
-  
-  res.status(200).send("<h1>teste</h1>");
-
+  let codigo = await gerarCodigo("mosaico+lista", "VEJA MAIS VÍDEOS DA CINDERELA", "cinderela", 10, "date");    
+  res.send(`${codigo}`);
 });
 
 router.get('/protected', isLoggedIn, (req, res) => {
@@ -56,10 +44,9 @@ router.get('/logout', (req, res) => {
 
 router.post('/gerar-layouts/', function(req, res, next) {
   let layout = gerarCodigo(req.body.estilo-layout, req.body.titulo, req.body.query, req.body.numero, req.body.order);
-  //let status = "Layout gerado com sucesso!";
   console.log(layout);
-  res.send(layout);
-  res.redirect("/"); 
+  res.send(`${layout}`);
+  next();
 });
 
 module.exports = router;

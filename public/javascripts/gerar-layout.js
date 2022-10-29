@@ -9,10 +9,9 @@ const URL = "http://localhost:3000/";
       let req = new XMLHttpRequest();
       req.onreadystatechange = function () {
         if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-          let response = JSON.stringify(this.response);
           console.log(this.response);
-          espacoLayout.innerHTML = this.responseText;
-          console.log(this.getAllResponseHeaders());
+          espacoLayout.innerHTML = this.response;
+          //console.log(this.getAllResponseHeaders());
         }
       };
       req.open("GET", URL);
