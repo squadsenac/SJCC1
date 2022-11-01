@@ -5,21 +5,25 @@ const layouts = {
         
                     if(numvids != null && numvids > 0){
                         for (let i=0; i < numvids; i++){
-                            let blocolista =  `<div id= "card2" class="card mb-3 rounded-0 border-0 border-bottom" style="max-width: auto;">
-                            <div class="row g-0">   
-                                <div class="col">
-                                        <iframe width="471" height="265" src=${linksvideos.links[i]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                            
-                                </div>
-                                <div class="col">
-                                    <div class="card-body">
-                                                <span class= "topico">${linksvideos.titulos[i]}</span>
-                                            <h5 class="descri-video">${linksvideos.descritivos[i]}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>`
-                        lista += blocolista;
+                            let titulofinal = "";
+                            let tamanhotitulo = linksvideos.titulos[i].length;
+                            if(tamanhotitulo > 60){
+                                titulofinal = linksvideos.titulos[i].slice(0,61) + "...";
+                            }else{
+                                titulofinal = linksvideos.titulos[i];
+                            }
+                            let blocolista =  `                 
+                                    <div style="display: flex; flex-direction: row; justify-content: center; margin: 50px;">
+                                        <div style="text-align: center;"><iframe width="471" height="265" src=${linksvideos.links[i]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 15px;"></iframe></div>
+                                        <div style="text-align: justify;">
 
+                                            <span style="color:red; font-weight:bold;font-size: 18px;padding-left: 25px;">
+                                            ${titulofinal}</span>
+                                            <p style="font-weight: light;font-size: 28px;text-align:left;padding-top: 25px; padding-left: 25px;">${linksvideos.descritivos[i]}</p>
+
+                                        </div>
+                                    </div> `
+                            lista += blocolista;
                         }
                     }else{
                         console.log(erroMsg);
@@ -34,6 +38,8 @@ const layouts = {
             if(numvids != 3){
                 numvids = 3;
             }
+
+            linksvideos.links.sort(function(){return 0.5 - Math.random()});
 
             if(numvids != null && numvids > 0 && numvids <= 3){
                     mosaico = `  
@@ -55,15 +61,22 @@ const layouts = {
     },
     thumbnails: function (numvids, linksvideos){
         let thumbs = "";
-        let header = ` <div style = "display: grid; grid-template-columns: repeat(3, 1fr);">`;
+        let header = ` <div style = "display: grid; grid-template-columns: repeat(3, 1fr); padding: 0px; margin: 0px; max-width: 50px">`;
         let closetag = `</div>`;
         let erroMsg = "Adicione um número de vídeos para o seu layout.";
 
             if(numvids != null && numvids > 0){
+                    
                     for (let i=0; i < numvids; i++){
-                        let blocothumbs =  `
-                        <div style="display: flex; flex-direction: column; align-items: center ;margin: auto;"><iframe style="margin: 20px;"  width="405" height="285" src=${linksvideos.links[i]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p style="padding: 0px; margin-left: 0px;; word-wrap: break-word; width: 70%; text-align: center;">${linksvideos.titulos[i]}</p></div>
-                         `;
+                        let titulofinal = "";
+                        let tamanhotitulo = linksvideos.titulos[i].length;
+                        if(tamanhotitulo > 60){
+                            titulofinal = linksvideos.titulos[i].slice(0,61) + "...";
+                        }else{
+                            titulofinal = linksvideos.titulos[i];
+                        }
+                        let blocothumbs = `
+                        <div style="display: flex; flex-direction: column; align-items: center; margin: auto;"><iframe style="margin: 20px;"  width="375" height="255" src=${linksvideos.links[i]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 15px;></iframe><p style="padding: 0px; margin-left: 0px;; word-wrap: break-word; width: 70%; text-align: center;">${titulofinal}</p></div>`;
                        
                         thumbs += blocothumbs;
                     }

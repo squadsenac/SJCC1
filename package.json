@@ -13,8 +13,9 @@
     "dotenv": "^16.0.2",
     "express": "~4.16.1",
     "express-session": "^1.17.3",
+    "firebase": "^9.13.0",
     "googleapis": "^108.0.0",
-    "hbs": "~4.0.4",
+    "hbs": "^4.2.0",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "node-fetch": "^2.6.1",
@@ -22,6 +23,6 @@
     "passport": "^0.6.0",
     "passport-google-oauth2": "^0.2.0",
     "passport-google-oidc": "^0.1.0",
-    "passport-youtube-v3": "^2.1.0"
+    "passport-youtube-v3": "^1.0.1"
   }
 }

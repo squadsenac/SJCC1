@@ -9,11 +9,11 @@ function isLoggedIn(req, res, next) {
   req.user ? next() : res.sendStatus(401);
 }
 
-router.get('/', async function(req, res, next) {
+/* router.get('/', async function(req, res, next) {
   //res.send('<a href="/auth/google">Authenticate with Google</a>');
   let codigo = await gerarCodigo("mosaico+lista", "VEJA MAIS VÍDEOS DA CINDERELA", "cinderela", 10, "date");    
   res.send(`${codigo}`);
-});
+}); */
 
 router.get('/protected', isLoggedIn, (req, res) => {
   //res.send(`Olá ${req.user.displayName}`);
@@ -47,6 +47,13 @@ router.post('/gerar-layouts/', function(req, res, next) {
   console.log(layout);
   res.send(`${layout}`);
   next();
+});
+
+router.get('/gerar-layouts/:optLayout/:titRodape/:query/:resultsPerPage/:order', async function(req, res, next) {
+  let numvids = req.params.resultsPerPage;
+  let layout = await gerarCodigo(req.params.optLayout, req.params.titRodape, req.params.query, req.params.resultsPerPage, req.params.order);
+  console.log(layout);
+  res.send(`${layout}`);
 });
 
 module.exports = router;

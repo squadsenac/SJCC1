@@ -12,31 +12,29 @@ async function gerarCodigo(optLayout, titRodape, query, resultsPerPage, order){
         if(optLayout == "lista"){
 
             let cabecalho = `
-                <div class="col-8">
-                <h4 class="tit-previews">${titRodape}</h4>
-                <br>`
+                <h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4>`
             let geralista = layouts.lista(resultsPerPage, linksvideos);
-            let tagfecha = `</div>`
+            //let tagfecha = `</div>`
                     
-            codigoFinal = cabecalho.concat(geralista, tagfecha);
+            codigoFinal = cabecalho.concat(geralista);
         
         }else if(optLayout == "mosaico"){
             let geramosaico = layouts.mosaico(resultsPerPage, linksvideos);
             codigoFinal = `
-            <h4 class="tit-previews">${titRodape}</h4>\r\n
+            <h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4>\r\n
                 ${geramosaico}\r\n`;
 
         }else if(optLayout == "thumbnails"){
             let gerarThumbs = layouts.thumbnails(resultsPerPage, linksvideos);
             codigoFinal = `
-            <h4 style="text-align: center; margin: 30px;">${titRodape}</h4>
+                    <h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4>
             ${gerarThumbs} `;
 
         }else if(optLayout == "mosaico+lista"){
             let geralista = layouts.lista(resultsPerPage, linksvideos);
             let geramosaico = layouts.mosaico(resultsPerPage, linksvideos);
             codigoFinal = `
-                    <h4 class="tit-previews">${titRodape}</h4>
+                    <h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4>
                     ${geramosaico}
                     ${geralista}`;
 
@@ -45,7 +43,7 @@ async function gerarCodigo(optLayout, titRodape, query, resultsPerPage, order){
             let gerarThumbs = layouts.thumbnails(resultsPerPage, linksvideos);
             let geramosaico = layouts.mosaico(resultsPerPage, linksvideos);
             codigoFinal = `
-                    <h4 class="tit-previews">${titRodape}</h4>
+                    <h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4>
                     ${geramosaico}
                     ${gerarThumbs}`;
 
