@@ -9,7 +9,7 @@ const passport = require('passport');
 const cors = require('cors');
 
 var corsOptions = {
-  "origin": "http://127.0.0.1:5501",
+  "origin": "http://127.0.0.1:5500",
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
   "optionsSuccessStatus": 204
 };

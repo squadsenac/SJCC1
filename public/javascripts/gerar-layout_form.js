@@ -28,7 +28,7 @@ function getLayout(){
 
 //Ordem de aparição dos vídeos
 function getOrder(){
-    let data = document.querySelector("#date");
+    let data = document.getElementById("date");
     let avaliacao = document.getElementById("Rating");
     let relevancia = document.getElementById("Relevance");
     let titulo = document.getElementById("Title");

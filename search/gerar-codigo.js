@@ -11,24 +11,20 @@ async function gerarCodigo(optLayout, titRodape, query, resultsPerPage, order){
 
         if(optLayout == "lista"){
 
-            let cabecalho = `
-                <h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4>`
+            let cabecalho = `<h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4>`
             let geralista = layouts.lista(resultsPerPage, linksvideos);
-            //let tagfecha = `</div>`
                     
-            codigoFinal = cabecalho.concat(geralista);
+            codigoFinal = cabecalho + geralista;
         
         }else if(optLayout == "mosaico"){
             let geramosaico = layouts.mosaico(resultsPerPage, linksvideos);
-            codigoFinal = `
-            <h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4>\r\n
+            codigoFinal = `<h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4>\r\n
                 ${geramosaico}\r\n`;
 
         }else if(optLayout == "thumbnails"){
             let gerarThumbs = layouts.thumbnails(resultsPerPage, linksvideos);
-            codigoFinal = `
-                    <h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4>
-            ${gerarThumbs} `;
+            let cabecalho = `<h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4> `
+            codigoFinal = cabecalho + gerarThumbs;
 
         }else if(optLayout == "mosaico+lista"){
             let geralista = layouts.lista(resultsPerPage, linksvideos);
@@ -42,8 +38,7 @@ async function gerarCodigo(optLayout, titRodape, query, resultsPerPage, order){
 
             let gerarThumbs = layouts.thumbnails(resultsPerPage, linksvideos);
             let geramosaico = layouts.mosaico(resultsPerPage, linksvideos);
-            codigoFinal = `
-                    <h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4>
+            codigoFinal = `<h4 style="text-align: center; margin: 30px; font-weight:bold">${titRodape}</h4>
                     ${geramosaico}
                     ${gerarThumbs}`;
 

@@ -14,15 +14,11 @@ async function pegarVideos(query, resultsPerPage, order){
       descritivos:[]
     };
     let tubeURL = "https://www.youtube.com/embed/";
-    let url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&type=video&part=snippet&channelId=${idSJCC}&q=${query}&videoEmbeddable=true`;
-    if (resultsPerPage) {
-        url = `${url}&maxResults=${resultsPerPage}`;
-      }else if(resultsPerPage && order){
-        url = `${url}&maxResults=${resultsPerPage}&order=${order}`;
-      }else if(order){
+    let url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&type=video&part=snippet&channelId=${idSJCC}&q=${query}&videoEmbeddable=true&maxResults=${resultsPerPage}`;
+    if(order){
         url = `${url}&order=${order}`;
-      }
-
+    }
+    
     const response = await fetch(url);
     const data = await response.json();
     //console.log(data.items[0].id.videoId);

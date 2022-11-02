@@ -12,6 +12,11 @@ const layouts = {
                             }else{
                                 titulofinal = linksvideos.titulos[i];
                             }
+
+                            if(linksvideos.descritivos[i] == "" || linksvideos.descritivos[i] == null || linksvideos.descritivos[i] == undefined){
+                                linksvideos.descritivos[i] == "VÍDEO SEM DESCRITIVO.CORRIGIR NO PERFIL DO YOUTUBE";
+                            }
+
                             let blocolista =  `                 
                                     <div style="display: flex; flex-direction: row; justify-content: center; margin: 50px;">
                                         <div style="text-align: center;"><iframe width="471" height="265" src=${linksvideos.links[i]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 15px;"></iframe></div>
@@ -76,7 +81,7 @@ const layouts = {
                             titulofinal = linksvideos.titulos[i];
                         }
                         let blocothumbs = `
-                        <div style="display: flex; flex-direction: column; align-items: center; margin: auto;"><iframe style="margin: 20px;"  width="375" height="255" src=${linksvideos.links[i]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 15px;></iframe><p style="padding: 0px; margin-left: 0px;; word-wrap: break-word; width: 70%; text-align: center;">${titulofinal}</p></div>`;
+                        <div style="display: flex; flex-direction: column; align-items: center; margin: auto; border-radius: 15px;"><iframe style="margin: 20px;"  width="375" height="255" src=${linksvideos.links[i]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 15px;" ></iframe><p style="padding: 0px; margin-left: 0px;; word-wrap: break-word; width: 70%; text-align: center;">${titulofinal}</p></div>`;
                        
                         thumbs += blocothumbs;
                     }
