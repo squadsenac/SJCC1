@@ -3,11 +3,10 @@ const fetch = require("node-fetch");
 const dotenv = require('dotenv');
 dotenv.config();
 const API_KEY = process.env.YT_API_KEY;
-//const API_KEY = "AIzaSyB8H2HGMDClpxjnxGAUpK-ishlrakn4Fis";
 
 
 async function pegarVideos(query, resultsPerPage, order){
-    let idSJCC = "UCe1XGNDeEwAx5xaLGcNPEbQ";
+    let idSJCC = process.env.JCTV_CHANNEL_ID;
     let vidInfos = {
       links: [],
       titulos: [],
@@ -18,7 +17,7 @@ async function pegarVideos(query, resultsPerPage, order){
     if(order){
         url = `${url}&order=${order}`;
     }
-    
+
     const response = await fetch(url);
     const data = await response.json();
     //console.log(data.items[0].id.videoId);

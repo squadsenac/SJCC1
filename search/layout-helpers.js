@@ -1,3 +1,5 @@
+var {checarDescritivo, tratarTitulo} = require('./metodos-strings');
+
 const layouts = {
     lista: function (numvids, linksvideos){
                 let lista = "";
@@ -5,17 +7,9 @@ const layouts = {
         
                     if(numvids != null && numvids > 0){
                         for (let i=0; i < numvids; i++){
-                            let titulofinal = "";
-                            let tamanhotitulo = linksvideos.titulos[i].length;
-                            if(tamanhotitulo > 60){
-                                titulofinal = linksvideos.titulos[i].slice(0,61) + "...";
-                            }else{
-                                titulofinal = linksvideos.titulos[i];
-                            }
-
-                            if(linksvideos.descritivos[i] == "" || linksvideos.descritivos[i] == null || linksvideos.descritivos[i] == undefined){
-                                linksvideos.descritivos[i] == "VÍDEO SEM DESCRITIVO.CORRIGIR NO PERFIL DO YOUTUBE";
-                            }
+                           
+                            titulofinal = tratarTitulo(linksvideos.titulos[i]);
+                            descritivoFinal = checarDescritivo(linksvideos.descritivos[i]);
 
                             let blocolista =  `                 
                                     <div style="display: flex; flex-direction: row; justify-content: center; margin: 50px;">
@@ -24,7 +18,7 @@ const layouts = {
 
                                             <span style="color:red; font-weight:bold;font-size: 18px;padding-left: 25px;">
                                             ${titulofinal}</span>
-                                            <p style="font-weight: light;font-size: 28px;text-align:left;padding-top: 25px; padding-left: 25px;">${linksvideos.descritivos[i]}</p>
+                                            <p style="font-weight: light;font-size: 28px;text-align:left;padding-top: 25px; padding-left: 25px;">${descritivoFinal}</p>
 
                                         </div>
                                     </div> `
@@ -80,6 +74,7 @@ const layouts = {
                         }else{
                             titulofinal = linksvideos.titulos[i];
                         }
+                        
                         let blocothumbs = `
                         <div style="display: flex; flex-direction: column; align-items: center; margin: auto; border-radius: 15px;"><iframe style="margin: 20px;"  width="375" height="255" src=${linksvideos.links[i]} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 15px;" ></iframe><p style="padding: 0px; margin-left: 0px;; word-wrap: break-word; width: 70%; text-align: center;">${titulofinal}</p></div>`;
                        
