@@ -2,6 +2,17 @@
 <html lang="pt-BR">
 
 <head>
+
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     <link rel="stylesheet" href="./stylesheets/sjcc.css">
+     <script src="/public/javascripts/gerar-layout_form.js"></script>
+     <title>Busca e Montagem de Layout de Vìdeo</title>
+
 </head>
 
 <body class="body-busca">
@@ -16,29 +27,12 @@
                     
                     <div class="cel-header">
 
-                        <img src="/images/logo-jc.png" class="d-flex justify-content-center" alt="logo jc"
+                        <img src="./images/logo-jc.png" class="d-flex justify-content-center" alt="logo jc"
                             style="width: 25%; height: 80%; text-align:center; padding:20px; margin:auto">
                         <p class="titulo_pag_tags"> Gerador de layouts de vídeos para rodapé de matérias</p>
                     
                     </div>
                    
-            </div>
-
-            <div class="row">
-
-                <!-- Butão de logout -->
-
-                    <div class="cel-boas-vindas">
-
-                        <p class="texto_bv"> Bem-vindo {{usuario}}!</p>
-
-                        <div style="padding-left: 150px; padding-top: 5px;">
-                            <a href="/"><button type="button" class="btn btn-primary"
-                                style="padding: 5px; background-color: red; width: 170px; height: 40px; border-radius: 10px; margin-bottom: 2%">Logout</button></a>
-                        </div>
-
-                    </div>
-
             </div>
 
         </div>
@@ -47,8 +41,8 @@
     
     <div class="bloco-superior">
 
-        <form action="/gerar-layouts/" method="post">
-
+        
+        <div class="border-geral">
             <div class="row">
 
                 <div class="col">
@@ -65,8 +59,8 @@
                             <p class="card-text">1 - Escolha um título para o layout de vídeo.</p>
 
                             <div style="padding-top: 5px;">
-                                <label for="inp-titulo">Tìtulo:</label>
-                                <input id="inp-titulo" type="text" placeholder="Coloque o título aqui." name="titulo">
+                                <label for="titulo">Tìtulo:</label>
+                                <input id="titRodape" type="text" placeholder="Coloque o título aqui." name="titulo">
                             </div>
 
                             <!-- Radio Buttons de Estilo de Layout -->
@@ -153,7 +147,7 @@
                                                     <span class="input-group-text" id="basic-addon1"><i
                                                             class="bi bi-search"></i></span>
                                                     <input type="text" name="query" class="form-control" placeholder="Buscar"
-                                                        aria-label="Username" aria-describedby="bi bi-search">
+                                                        aria-label="Username" aria-describedby="bi bi-search" id="query">
                                                 </div>
                                             </form>
                                         </div>
@@ -188,36 +182,36 @@
 
                                     <!--Opções de Ordem-->
                                     <div class="form-check">
-                                        <input id="Date" class="form-check-input" type="radio" name="ordem"
-                                            id="flexRadioDefault1" value="Date">
+                                        <input id="date" class="form-check-input" type="radio" name="ordem"
+                                            id="flexRadioDefault1" value="date">
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             Data
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input id="Rating" class="form-check-input" type="radio" name="ordem"
-                                            id="flexRadioDefault2" value="Rating">
+                                            id="flexRadioDefault2" value="rating">
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             Avaliação
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input id="Relevance" class="form-check-input" type="radio" name="ordem"
-                                            id="flexRadioDefault2" value="Relevance">
+                                            id="flexRadioDefault2" value="relevance">
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             Relevancia
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input id="Title" class="form-check-input" type="radio" name="ordem"
-                                            id="flexRadioDefault2" value="Title">
+                                            id="flexRadioDefault2" value="title">
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             Titulo
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input id="ViewCount" class="form-check-input" type="radio" name="ordem"
-                                            id="flexRadioDefault2" value="ViewCount">
+                                            id="flexRadioDefault2" value="viewCount">
                                         <label class="form-check-label" for="flexRadioDefault2">
                                             Visualizações
                                         </label>
@@ -236,18 +230,15 @@
 
             <!-- Seção de gerar layout -->
             <div class="card-header"
-                style="border-radius: 25px; border-top-right-radius: 25px; background-color: white; width: ; margin-top: 2%;">
+                style="margin-top: 2%;">
                 <div class="col-4" style="margin-left: 30%; margin-top: 1%">
-                    <button type="submit" class="btn btn-primary"
-                            style="padding: 5px; background-color: red; width: 450px; height: 60px; border-radius: 10px; margin-bottom: 2%">Gerar
-                            Layout</button>
-                    {{!-- <a id="link-prev" href="" style="text-align: center;" target="iframe_prev"></a> --}}
+                    <button type="submit" class="btn btn-primary" style="padding: 5px; background-color: red; width: 450px; height: 60px; border-radius: 10px; margin-bottom: 2%" onclick=gerarLayout()>Gerar Layout</button>
+                   <!--  <a id="link-prev" href="" style="text-align: center;" target="iframe_prev"></a> -->
                 </div>
             </div>
 
-        </form>
+        </div>
 
-        
         <!-- Seção de Código e Preview -->
         
         <div class="row">
@@ -280,9 +271,9 @@
 
                                     <div class="input-group" style="position: relative;"> 
 
-                                        <textarea id="areaCodigo" class="form-control" aria-label="With textarea" readonly style="height: 500px; position: relative;">{{codigo}}</textarea>
+                                        <textarea id="areaCodigo" class="form-control" aria-label="With textarea" readonly style="height: 500px; position: relative;"></textarea>
                                         <a onclick="copiarCodigo()"><span class="icon-user" style="position: relative; left: 10px"><i class="bi bi-filetype-html" style="font-size: 30px;"></i></span></a>
-                                        <!-- position: absolute; left: 1205px; top: 5px; Icone acima da caixa de texto-->
+
                                     </div>
 
                                 </div>
@@ -292,18 +283,18 @@
                             <div class="tab-pane" id="preview" role="tabpanel" aria-labelledby="profile-tab">
                                 <div class="row" style="padding-top: 15px; padding-bottom: 15px;">
                                                       
-                                   
-                                </div>
-
-                                <div class="row-cols-1">
-
-                                    <hr>
-
-                                    <div id="preview">{{preview}}</div>
-
-                                    {{!-- <iframe sandbox="allow-presentation allow-same-origin allow-scripts" src="/index-materia-lista/" height="500" width="1260" title="Iframe Preview" style="border: 13px;" name="iframe_prev" id="iframe-prev"></iframe> --}}
 
                                 </div>
+
+                                <div class="row">
+      
+                                        <hr>
+
+                                        <div  id="preview" class="preview"></div>
+                                </div>
+
+                                    <!-- <iframe sandbox="allow-presentation allow-same-origin allow-scripts" src="/index-materia-lista/" height="500" width="1260" title="Iframe Preview" style="border: 13px;" name="iframe_prev" id="iframe-prev"></iframe> -->
+
                             </div>
 
                         </div>
@@ -328,7 +319,7 @@
 
                     <div class="card-body">
 
-                        <input type="text" class="form-control" id="status" aria-describedby="emailHelp" aria-readonly="true" readonly placeholder="status do sistema" value={{status}}>
+                        <input type="text" class="form-control" id="status" aria-describedby="emailHelp" aria-readonly="true" readonly placeholder="status do sistema" value="Selecione as opções de busca e layout">
 
                     </div>
                     
@@ -340,7 +331,7 @@
 
     </div>
 
-    <script src="/javascripts/behaviors_sjcc.js"></script>
+    <!-- <script src="/javascripts/behaviors_sjcc.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

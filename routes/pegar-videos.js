@@ -27,4 +27,6 @@ async function pegarVideos(query, resultsPerPage, order){
     return vidlinks;
 }
 
+//pegarVideos("crime", 10, "date");
+
 module.exports = {pegarVideos}

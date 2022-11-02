@@ -6,9 +6,17 @@ var logger = require('morgan');
 const dotenv = require('dotenv');
 const session = require('express-session');
 const passport = require('passport');
+const cors = require('cors');
+
+var corsOptions = {
+  "origin": "http://127.0.0.1:5501",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "optionsSuccessStatus": 204
+};
+
+dotenv.config();
 
 var indexRouter = require('./routes/index');
-
 
 var app = express();
 
@@ -16,7 +24,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
@@ -25,6 +33,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.authenticate('session'));
+app.use(cors(corsOptions));
 
 
 app.use('/', indexRouter);

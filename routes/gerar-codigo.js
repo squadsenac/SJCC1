@@ -205,6 +205,6 @@ async function gerarCodigo(optLayout, titRodape, query, resultsPerPage, order){
         return codigoFinal;
 }
 
-//gerarCodigo(1, "teste", "crime", 10, "date");
+//gerarCodigo("lista", "teste", "crime", 10, "date");
 
 module.exports = {gerarCodigo}

@@ -31,7 +31,7 @@
 }
 
 #imagem1 {
-    background-image: url(/images/imagem1.png);
+    background-image: url("../images/imagem1.png");
     background-position: 0 100%;
     background-size: cover;
     background-color: #e2001a;
@@ -63,15 +63,8 @@
     padding-top: 70px;
 }
 
-/* h1.titulo_conteudo{
-    text-align: center;
-    padding-left: 50px;
-    font-family: 'Inter', sans-serif;
-    font-weight: lighter;
-} */
 
 form.usuario{
-    /* text-align: center;    */
     padding-left: 590px;
     padding-right: 50px;
     padding-top: 40px;
@@ -88,7 +81,6 @@ form.usuario{
 }
 
 .campo2{
-    /* transform: translate(-36px); */
     width: 51%;
     height: 60%;
     padding: 20px 20px;
@@ -111,18 +103,15 @@ form.usuario{
     font-weight: bold;
     cursor: pointer;
     
-    /* transform: translate(5px, 22px); */
 }
 
 .lembrar-info{
-    /* text-align: center; */
     padding-right: 0px;
     padding-left: 590px;
     padding-top: 12px;
 }
 
 p.contato{
-    /* text-align: center; */
     padding-top: 80px;
     padding-right: 0px;
     padding-left: 590px;
@@ -155,7 +144,7 @@ p.contato{
 .cel-header{
     display: flex;
     flex-direction: column;
-    background-image: url('/images/recife-antigo.jpg'); 
+    background-image: url('../images/recife-antigo.jpg'); 
     background-attachment: fixed; 
     border-radius: 25px;
 }
@@ -194,146 +183,21 @@ p.contato{
     font-weight: lighter;
 }
 
-.linha{
-    border-top: 1px dashed #000000;
-}
-
-/*Seleção de Tags*/
-#tags2{
-    font-size: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 0px;
-    text-align: left;
-}
-
-.t-busca-tags{
+.descri-video {
     font-weight: bold;
-    padding-top: 20px;
-    font-size:20px;
-    text-align: center;
-    padding-right: 50px;
-    padding-left: 0px;
+    font-size: 28px;
+    text-align:justify;
+    padding-top: 25px;
 }
 
-.nome{
-    width: auto;
-    height: auto;
-    padding: auto;
-    background-color: #C4C4C4;
-    border-radius: 13px; 
-    border: none;
-    font-weight:600;
-    font-size: 18px;
+.topico{
+    color:red;
+    font-weight:bold;
+    font-size: 13px;
 }
-
-.nome:hover{
-    background-color: #E2001A;
-    color: white;
-    box-shadow: 0 12px 10px 0 rgba(90, 90, 90, 0.19);
-}
-
-.nome .delete{
-    height: 12px;
-    padding-left: 15px;
-}
-
-/*Adicionar Tag*/
-.texto-busca{
-    padding-top: 10px;
-}
-
-.busca-tags{
-    width: 82%;
-    size:40;
-    font-size: 16px;
-    text-align: center;
-    padding: 20px, 250px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-
-#plus{
-    border-width: 0px;
-    background-color: #ffffff;
-}
-
-.btn_tags{
-    position:static;
-    top: 353px;
-    height: 20px;
-    padding-left: 0px;
-    border-width: 0px;
-    background-color: #ffffff;
-}
-
-#res-tags{
-    border-width: 0px !important;
-    background-color: #ffffff;
-}
-
-/*Check p/ usar tags*/
-.check-tag {
-    padding: 25px 0;
-}
-
-.check-tag .check{
-    width: 27px;
-    height: 20px;
-}
-
-.check-tag .check1{
-    font-size: 16px;
-}
-
-/*URL da notícia*/
-.texto-url {
-    padding: 0 0 15px 0;
-}
-
-.busca-url{
-    width: 72%;
-    font-size: 15px;
-    height: 30px;
-}
-
-/*Arquivo*/
-.busca-arquivo{
-    width: 65%;
-    font-size: 15px;
-    height: 30px;
-    
-}
-
-.texto-arquivo i { 
-    position: absolute;
-    left: 442px;
-  }
-
-/*Período*/
-.periodo{
-    font-weight: bold;
-    padding-top: 20px;
-    font-size:20px;
-    text-align: left;
-    padding-right: 0px;
-    padding-left: 20px;
-}
-
-.periodo .cal-datas .de{
-    text-align: right;
-    font-size:16px;
-    font-weight: lighter;
-}
-
-.periodo .cal-datas .ate{
-    text-align: right;
-    font-size:16px;
-    font-weight: lighter;
-}
-
 
 /*Tipo de Organização*/
+
 .t-organizacao{
     font-weight: bold;
     font-size:20px;
@@ -520,6 +384,11 @@ div .link{
     transform: translateY(1px);
   }
 
+  /* Layout do preview */
+
+  .preview {
+    padding-right: 0px;
+}
 
 /* PÁGINA DE EXEMPLO - REPORTAGEM */
 
@@ -789,19 +658,6 @@ div .link{
     cursor: pointer;
     background-color: #d71a0d;
     border-radius: 10px
-}
-
-.descri-video {
-    font-weight: bold;
-    font-size: 28px;
-    text-align:justify ;
-    padding-top: 25px;
-}
-
-.topico{
-    color:red;
-    font-weight:bold;
-    font-size: 13px;
 }
 
 #card2{
