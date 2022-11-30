@@ -2,3 +2,8 @@
 .env
 /functions
 .firebase
+id_sjcc1.pub
+id_sjcc1
+Dockerfile
+docker-compose.yml
+.dockerignore
