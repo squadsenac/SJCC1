@@ -70,7 +70,7 @@ function getOrder(){
             query != "" &&  
             numvids != ""  
         ){
-            const URL = `http://localhost:3000/gerar-layouts/${optLayout}/${titRodape}/${query}/${numvids}/${critOrder}`;
+            const URL = `https://sjcc1-2.fly.dev/gerar-layouts/${optLayout}/${titRodape}/${query}/${numvids}/${critOrder}`;
         
             console.log("Gerando layout...");
         

@@ -1,7 +1,7 @@
 'use strict';
 let botGerar = document.getElementById("botaogerar");
 let espacoLayout = document.getElementById("localdolayout");
-const URL = "http://localhost:3000/";
+const URL = "https://sjcc1-2.fly.dev/";
    
     function gerarLayout() {
       
