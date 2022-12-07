@@ -9,7 +9,7 @@ const passport = require('passport');
 const cors = require('cors');
 
 var corsOptions = {
-  "origin": process.env.DOMAIN_URL,
+  "origin": "https://sjcc1-video-layouts.netlify.app",
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
   "optionsSuccessStatus": 204
 };

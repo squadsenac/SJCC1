@@ -46,7 +46,7 @@ padding-top: 25px;
 padding-left: 25px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
    
     /* Responsividade estilo lista */
    
@@ -99,3 +99,58 @@ padding-left: 25px;
     padding-left: 0px;
     }
   }
+
+  @media only screen and (min-width: 600px) {
+     /* Responsividade estilo lista */
+   
+    .header-lista
+    {
+    text-align: center; 
+    margin: 30px; 
+    font-weight:bold
+    }
+    
+    .ly-lista
+    {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    margin: 50px;
+    }
+    
+    .videos-lista
+    {
+    text-align: center;
+    }
+    
+    .ifr-lista
+    {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    }
+    
+    .bl-txt-lista
+    {
+    text-align: justify;
+    }
+    
+    .titulo-lista
+    {
+    color:red; 
+    font-weight:bold;
+    font-size: 100%;
+    padding-left: 25px;
+    }
+    
+    .descritivo-lista
+    {
+    font-weight: light;
+    font-size: 100%;
+    text-align:left;
+    padding-top: 25px; 
+    padding-left: 25px;
+    }
+  }
+
+ 
