@@ -10,6 +10,7 @@
      <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
      <link rel="stylesheet" href="./stylesheets/sjcc.css">
+     <link rel="stylesheet" href="./stylesheets/css_layouts.css">
      <script src="./javascripts/gerar-layout_form.js"></script>
      <title>Busca e Montagem de Layout de Vìdeo</title>
 
@@ -18,110 +19,26 @@
 <body class="body-busca">
 
     <!-- Logo, busca e layout  -->
-
-    <div class="header-logo">
-
-        <div class="container">
-
-             <div class="row">
-                    
-                    <div class="cel-header">
-
-                        <img src="./images/logo-jc.png" class="d-flex justify-content-center" alt="logo jc"
-                            style="width: 25%; height: 80%; text-align:center; padding:20px; margin:auto">
-                        <p class="titulo_pag_tags"> Gerador de layouts de vídeos para rodapé de matérias</p>
-                    
-                    </div>
-                   
-            </div>
-
-        </div>
-    
-    </div>
     
     <div class="bloco-superior">
 
+        <div class="row">
+                    
+            <div class="col-12 col-md-12 col-lg-12">
+
+                <div class="cel-header text-center">
+
+                    <img src="./images/logo-jc.png" class="img-responsive mx-auto" style="width:20%;" alt="logo jc">
+                    <p class="fw-bold mx-auto text-wrap" style="font-size:115%; color: white;"> Gerador de layouts de vídeos para rodapé de matérias</p>
+                
+                </div>
+            
+            </div>
+               
+        </div>
         
         <div class="border-geral">
             <div class="row">
-
-                <div class="col">
-
-                    <div class="card" style="border-radius: 25px;">
-                        <div class="card-header"
-                            style="border-top-left-radius: 25px; border-top-right-radius: 25px; background-color: red;">
-                            <h5 style="text-align: center; color: white;">Configurações de Layout</h3>
-                        </div>
-                        <div class="card-body">
-
-                            <!-- Campo de título -->
-
-                            <p class="card-text">1 - Escolha um título para o layout de vídeo.</p>
-
-                            <div style="padding-top: 5px;">
-                                <label for="titulo">Tìtulo:</label>
-                                <input id="titRodape" type="text" placeholder="Coloque o título aqui." name="titulo">
-                            </div>
-
-                            <!-- Radio Buttons de Estilo de Layout -->
-
-                            <p class="card-text" style="padding-top: 35px;">2 - Escolha um estilo de layout de vídeo</p>
-
-                            <div class="form-check">
-                                <input id="lista" class="form-check-input" type="radio" name="estilo-layout"
-                                    id="flexRadioDefault1" value="lista">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Lista
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input id="mosaico" class="form-check-input" type="radio" name="estilo-layout"
-                                    id="flexRadioDefault2" value="mosaico">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Mosaico
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input id="thumbs" class="form-check-input" type="radio" name="estilo-layout"
-                                    id="flexRadioDefault2" value="thumbnails">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Thumbnails
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input id="moslist" class="form-check-input" type="radio" name="estilo-layout"
-                                    id="flexRadioDefault2" value="mosaico+lista">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Mosaico + Lista
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input id="mosthumb" class="form-check-input" type="radio" name="estilo-layout"
-                                    id="flexRadioDefault2" value="mosaico+thumbnails">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Mosaico + Thumbnails
-                                </label>
-                            </div>
-
-                            <!-- Nùmero de Vìdeos -->
-
-                            <p class="card-text" style="padding-top: 35px;">3 - Escolha o número de vídeos a serem
-                                incluídos na página.</p>
-
-                            <div class="num_videos" style="text-align: left; padding-bottom: 20px; padding-left: 0px;">
-                                <form action="">
-                                    <label for="numero">Número de vídeos:</label>
-                                    <input type="number" id="numero" name="numero" min="1" max="10" value="1"></input>
-                                </form>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                </div>
 
                 <div class="col">
 
@@ -226,16 +143,101 @@
                     </div>
 
                 </div>
+
+                <div class="col">
+
+                    <div class="card" style="border-radius: 25px;">
+                        <div class="card-header"
+                            style="border-top-left-radius: 25px; border-top-right-radius: 25px; background-color: red;">
+                            <h5 style="text-align: center; color: white;">Configurações de Layout</h3>
+                        </div>
+                        <div class="card-body">
+
+                            <!-- Campo de título -->
+
+                            <p class="card-text">1 - Escolha um título para o layout de vídeo.</p>
+
+                            <div style="padding-top: 5px;">
+                                <label for="titulo">Tìtulo:</label>
+                                <input id="titRodape" type="text" placeholder="Coloque o título aqui." name="titulo">
+                            </div>
+
+                            <!-- Radio Buttons de Estilo de Layout -->
+
+                            <p class="card-text" style="padding-top: 35px;">2 - Escolha um estilo de layout de vídeo</p>
+
+                            <div class="form-check">
+                                <input id="lista" class="form-check-input" type="radio" name="estilo-layout"
+                                    id="flexRadioDefault1" value="lista">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Lista <i>(mobile, tablet e desktop)</i>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input id="mosaico" class="form-check-input" type="radio" name="estilo-layout"
+                                    id="flexRadioDefault2" value="mosaico">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Mosaico <i>(tablet e desktop)</i>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input id="thumbs" class="form-check-input" type="radio" name="estilo-layout"
+                                    id="flexRadioDefault2" value="thumbnails">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Thumbnails<i>(tablet e desktop)</i>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input id="moslist" class="form-check-input" type="radio" name="estilo-layout"
+                                    id="flexRadioDefault2" value="mosaico+lista">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Mosaico + Lista<i>(tablet e desktop)</i>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input id="mosthumb" class="form-check-input" type="radio" name="estilo-layout"
+                                    id="flexRadioDefault2" value="mosaico+thumbnails">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Mosaico + Thumbnails<i>(tablet e desktop)</i>
+                                </label>
+                            </div>
+
+                            <!-- Nùmero de Vìdeos -->
+
+                            <p class="card-text" style="padding-top: 35px;">3 - Escolha o número de vídeos a serem
+                                incluídos na página.</p>
+
+                            <div class="num_videos" style="text-align: left; padding-bottom: 20px; padding-left: 0px;">
+                                <form action="">
+                                    <label for="numero">Número de vídeos:</label>
+                                    <input type="number" id="numero" name="numero" min="1" max="10" value="1"></input>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-12 col-md-12 col-lg-12">
+
+                        <!-- Seção de gerar layout -->               
+                            
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button type="submit" id="btn_submit" class="btn btn-primary" onclick=gerarLayout()>Gerar Layout</button>
+                        </div>    
+                                                                      
+                    </div>
+
+                </div>
+               
             </div>
 
-            <!-- Seção de gerar layout -->
-            <div class="card-header"
-                style="margin-top: 2%;">
-                <div class="col-4" style="margin-left: 30%; margin-top: 1%">
-                    <button type="submit" class="btn btn-primary" style="padding: 5px; background-color: red; width: 450px; height: 60px; border-radius: 10px; margin-bottom: 2%" onclick=gerarLayout()>Gerar Layout</button>
-                   <!--  <a id="link-prev" href="" style="text-align: center;" target="iframe_prev"></a> -->
-                </div>
-            </div>
 
         </div>
 

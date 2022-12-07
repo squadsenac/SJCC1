@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "start:dev": "nodemon ./bin/www"
+    "start:dev": "nodemon ./bin/www",
+    "test": "cucumber-js"
   },
   "dependencies": {
     "connect-sqlite3": "^0.9.13",
@@ -17,6 +18,7 @@
     "googleapis": "^108.0.0",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
+    "jest": "^29.3.1",
     "morgan": "~1.9.1",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.19",
@@ -24,5 +26,8 @@
     "passport-google-oauth2": "^0.2.0",
     "passport-google-oidc": "^0.1.0",
     "passport-youtube-v3": "^2.1.0"
+  },
+  "devDependencies": {
+    "cucumber": "^6.0.7"
   }
 }
